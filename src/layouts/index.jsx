@@ -2,20 +2,10 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
+import GMNavbar from '../components/GMNavbar'
+import GMFooter from '../components/GMFooter';
 
-import './index.scss'
-
-const Header = () => (
-  <div>
-    <div>
-      <h1>
-        <Link to="/">
-          Gatsby
-        </Link>
-      </h1>
-    </div>
-  </div>
-)
+import '../styles/index.scss'
 
 const TemplateWrapper = ({ children }) => (
   <div>
@@ -26,10 +16,11 @@ const TemplateWrapper = ({ children }) => (
         { name: 'keywords', content: 'sample, something' },
       ]}
     />
-    <Header />
-    <div className="nodox">
+    <GMNavbar />
+    <div className="">
       {children()}
     </div>
+    <GMFooter />
   </div>
 )
 
