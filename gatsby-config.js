@@ -9,6 +9,12 @@ module.exports = {
       options: {
         precision: 8,
       }
-    }
+    },
+    {
+      resolve: 'gatsby-transformer-remark',
+      options: {
+        plugins: [] // just in case those previously mentioned remark plugins sound cool :)
+      }
+    },
   ],
 }
