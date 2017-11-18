@@ -3,17 +3,18 @@
   position: relative;
   display: flex;
   align-items: center;
+  width: auto;
   padding: 16px 8px;
   color: white;
 }
 
 .navbar-dark {
-  background-color: #343A42;
+  background-color: black;
 }
 
 .navbar-brand {
+  flex: 0 0 10%;
   display: block;
-  min-width: 100px;
   color: white;
   font-size: 1.25rem;
   text-decoration: none;
@@ -29,6 +30,20 @@
   margin: 0;
 }
 
+.navbar-overflow {
+  overflow-x: auto;
+  overflow-y: hidden;
+  
+  @media (max-width: $breakpoint-sm) {
+    mask-image: -webkit-linear-gradient(to right, transparent, black 20px, black 90%, transparent);
+    mask-image: -moz-linear-gradient(to right, transparent, black 20px, black 90%, transparent);
+    mask-image: linear-gradient(to right, transparent, black 20px, black 90%, transparent);
+    -webkit-mask-image: -webkit-linear-gradient(to right, transparent, black 20px, black 90%, transparent);
+    -webkit-mask-image: -moz-linear-gradient(to right, transparent, black 20px, black 90%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 20px, black 90%, transparent);
+  }
+}
+
 .nav-item {
   padding-left: 16px;
   font-size: .95rem;
@@ -36,6 +51,6 @@
 }
 
 .nav-link {
-  color: hsla(0, 0%, 100%, .5);
+  color: hsla(0, 0%, 100%, .8);
   text-decoration: none;
 }

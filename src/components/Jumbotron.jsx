@@ -11,8 +11,8 @@ const Jumbotron = (props) => {
   // CallTAction present?
   if(!!data.lead.callToAction) {
     ActionButton = (
-      <p className="lead">
-        <Link to={data.lead.callToAction.path} color="primary">{data.lead.callToAction.text}</Link>
+      <p className="jumbotron--lead">
+        <Link to={data.lead.callToAction.path} className="jumbotron--lead--action -primary">{data.lead.callToAction.text}</Link>
       </p>
     );
   }
@@ -25,8 +25,8 @@ const Jumbotron = (props) => {
 
   return (
     <div className={jumbotronClassses}>
-      <h1 className="title">{data.lead.title}</h1>
-      <p className="lead">
+      <h1 className="jumbotron--title">{data.lead.title}</h1>
+      <p className="jumbotron--lead">
         <span>{data.lead.partOne}</span>
         <br/>
         <span>{data.lead.partTwo}</span>

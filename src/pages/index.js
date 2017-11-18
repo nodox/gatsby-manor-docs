@@ -1,8 +1,6 @@
 import React from 'react';
 import Link from 'gatsby-link';
 import Highlight from '../components/Highlight';
-import Section from '../components/Section';
-import SectionTitle from '../components/SectionTitle';
 import Jumbotron from '../components/Jumbotron';
 import CodeSnippet from '../components/CodeSnippet';
 
@@ -38,7 +36,6 @@ const IndexPage = () => {
                   here at Gatsby Manor. Once merged, use Jay to get your theme.',
       },
     ],
-
     getttingStarted: [
       {
         step: 'Install Jay as a global dependency using npm.',
@@ -72,54 +69,45 @@ const IndexPage = () => {
   return (
     <div>
       <Jumbotron center data={data.hero} />
-      <Section>
+
+      <div className="container mr-auto home--section home--highlight">
         {data.highlights.map((obj, idx) => {
           return (
+            <Highlight key={idx} data={obj} />
+          );
+        })}
+      </div>
+
+      <div className="container mr-auto home--section home--guide">
+        <h4>Getting Started</h4>
+        {data.getttingStarted.map((obj, idx) => {
+          return (
             <div key={idx}>
-              <Highlight data={obj} />
+              <p>{obj.step}</p>
+              <CodeSnippet>{obj.code}</CodeSnippet>
             </div>
           );
         })}
-      </Section>
+      </div>
 
-      <Section>
-        <div>
-          <SectionTitle>Getting Started</SectionTitle>
-          {data.getttingStarted.map((obj, idx) => {
-            return (
-              <div key={idx}>
-                <p>{obj.step}</p>
-                <CodeSnippet>{obj.code}</CodeSnippet>
-              </div>
-            );
-          })}
-        </div>
-      </Section>
+      <div className="container mr-auto home--section home--guide">
+        <h4>Using Themes</h4>
+        {data.usingThemes.map((obj, idx) => {
+          return (
+            <div key={idx}>
+              <p>{obj.step}</p>
+              <CodeSnippet>{obj.code}</CodeSnippet>
+            </div>
+          );
+        })}
+      </div>
 
-      <Section>
-        <div>
-          <SectionTitle>Using Themes</SectionTitle>
-          {data.usingThemes.map((obj, idx) => {
-            return (
-              <div key={idx}>
-                <p>{obj.step}</p>
-                <CodeSnippet>{obj.code}</CodeSnippet>
-              </div>
-            );
-          })}
-        </div>
-      </Section>
-
-      <div>
-        <div>
-          <div className="gm--home--banner">
-            <h4>Deploy your first theme today!</h4>
-            <Link to='/gallery' color="primary">View gallery</Link>
-          </div>
-        </div>
+      <div className="home--banner">
+        <h4 className="home--banner--lead">Deploy your first theme today!</h4>
+        <Link to='/gallery' className="home--banner--action -primary">View gallery</Link>
       </div>
     </div>
-  )
+  );
 }
 
 export default IndexPage

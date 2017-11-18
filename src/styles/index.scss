@@ -1,8 +1,12 @@
 @import "node_modules/normalize-scss/sass/normalize";
 
-@import "./_reset.scss";
+
+@import "./_reset";
+@import "./_breakpoints";
+@import "./_grid";
 @import "./_navbar";
 @import "./_jumbotron";
+@import "./_snippets";
 @import "./footer";
 @import "./home";
 @import "./gallery";

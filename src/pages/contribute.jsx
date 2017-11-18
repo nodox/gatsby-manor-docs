@@ -21,15 +21,12 @@ const Contribute = () => {
 
   return (
     <div>
-
-          <div>
-            <h4>Deploy your fist theme today!</h4>
-            <p className="lead">
-              <Link color="primary">View gallery</Link>
-            </p>
-          </div>
-
-
+      <div>
+        <h4>Deploy your fist theme today!</h4>
+        <p className="lead">
+          <Link to="/">View gallery</Link>
+        </p>
+      </div>
     </div>
   )
 }

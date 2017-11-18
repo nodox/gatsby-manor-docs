@@ -1,7 +1,48 @@
-.gm--home--banner {
+.home--highlight {
+  display: flex;
+  flex-flow: column nowrap;
+  
+  @media (min-width: $breakpoint-sm) {
+    flex-flow: row nowrap;
+  }
+}
+
+.home--section {
+  padding-top: 30px;
+}
+
+.home--banner {
   width: 100%;
   text-align: center;
   color: white;
-  background-color: black;
+  background-color: #343a42;
   padding: 20px 0;
+}
+
+.home--banner--lead {
+  padding: 1rem 0;
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+
+.home--banner--action {
+  text-decoration: none;
+  color: white;
+
+  &.-primary {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    padding: .5rem 1rem;
+    border-radius: .2rem;
+    background-color: #ffc107;
+
+  }
+
+  &.-primary:hover {
+    text-decoration: underline;
+  }
+
 }

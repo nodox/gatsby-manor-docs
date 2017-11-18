@@ -1,20 +1,44 @@
 .jumbotron {
   padding: 4rem  2rem;
+  background-color: #343a42;
+  color: white;
 
   &.-center {
     text-align: center;
   }
 }
 
-
-.title {
+.jumbotron--title {
   font-size: 4.5rem;
   font-weight: 300;
   line-height: 1.2;
 
 }
 
-.lead {
+.jumbotron--lead {
   font-size: 1.25rem;
   font-weight: 300;
+}
+
+.jumbotron--lead--action {
+  text-decoration: none;
+  color: white;
+
+  &.-primary {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    padding: .5rem 1rem;
+    border-radius: .2rem;
+    background-color: #ffc107;
+
+  }
+
+  &.-primary:hover {
+    text-decoration: underline;
+  }
+
+
 }

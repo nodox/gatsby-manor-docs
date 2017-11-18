@@ -24,7 +24,7 @@ const Navbar = (props) => {
   return (
     <nav className="navbar navbar-dark">
       <a href="/" className="navbar-brand">Gatsby Manor</a>
-      <ul className="navbar-nav">
+      <ul className="navbar-nav navbar-overflow">
         {links.map((obj, idx) => {
           return (
             <li className="nav-item" key={idx}>
