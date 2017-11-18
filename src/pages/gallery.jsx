@@ -1,9 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
-import { Container, Row, Col, Button } from 'reactstrap';
-
-import GMJumbotron from '../components/GMJumbotron';
-import GMGrid from '../components/GMGrid';
+import Jumbotron from '../components/Jumbotron';
+import Grid from '../components/Grid';
 
 import '../styles/index.scss';
 
@@ -21,8 +19,8 @@ const Gallery = (props) => {
 
   return (
     <div>
-      <GMJumbotron data={data.hero} />
-      <GMGrid />
+      <Jumbotron data={data.hero} />
+      <Grid />
     </div>
   )
 }

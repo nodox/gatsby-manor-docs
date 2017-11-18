@@ -1,9 +1,10 @@
 import React from 'react';
 import Link from 'gatsby-link';
-import { Jumbotron, Button } from 'reactstrap';
+import classNames from 'classnames';
 
-const GMJumbotron = (props) => {
-  const { data } = props;
+
+const Jumbotron = (props) => {
+  const { data, center } = props;
 
   let ActionButton = null;
 
@@ -16,17 +17,23 @@ const GMJumbotron = (props) => {
     );
   }
 
+  let jumbotronClassses = classNames({
+    'jumbotron': true,
+    '-center': center ? true : false,
+  });
+
+
   return (
-    <Jumbotron className="gm--jumbotron">
-      <h1 className="display-3">{data.lead.title}</h1>
+    <div className={jumbotronClassses}>
+      <h1 className="title">{data.lead.title}</h1>
       <p className="lead">
         <span>{data.lead.partOne}</span>
         <br/>
         <span>{data.lead.partTwo}</span>
       </p>
       {ActionButton}
-    </Jumbotron>
+    </div>
   );
 };
 
-export default GMJumbotron;
+export default Jumbotron;

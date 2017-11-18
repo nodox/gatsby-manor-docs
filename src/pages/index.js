@@ -1,12 +1,10 @@
 import React from 'react';
 import Link from 'gatsby-link';
-import { Container, Row, Col, Button } from 'reactstrap';
-
-import GMHighlight from '../components/GMHighlight';
-import GMSection from '../components/GMSection';
-import GMSectionTitle from '../components/GMSectionTitle';
-import GMJumbotron from '../components/GMJumbotron';
-import GMCodeSnippet from '../components/GMCodeSnippet';
+import Highlight from '../components/Highlight';
+import Section from '../components/Section';
+import SectionTitle from '../components/SectionTitle';
+import Jumbotron from '../components/Jumbotron';
+import CodeSnippet from '../components/CodeSnippet';
 
 const IndexPage = () => {
   const data = {
@@ -73,53 +71,53 @@ const IndexPage = () => {
 
   return (
     <div>
-      <GMJumbotron data={data.hero} />
-      <GMSection>
+      <Jumbotron center data={data.hero} />
+      <Section>
         {data.highlights.map((obj, idx) => {
           return (
-            <Col>
-              <GMHighlight key={idx} data={obj} />
-            </Col>
+            <div key={idx}>
+              <Highlight data={obj} />
+            </div>
           );
         })}
-      </GMSection>
+      </Section>
 
-      <GMSection>
-        <Col>
-          <GMSectionTitle>Getting Started</GMSectionTitle>
+      <Section>
+        <div>
+          <SectionTitle>Getting Started</SectionTitle>
           {data.getttingStarted.map((obj, idx) => {
             return (
               <div key={idx}>
                 <p>{obj.step}</p>
-                <GMCodeSnippet>{obj.code}</GMCodeSnippet>
+                <CodeSnippet>{obj.code}</CodeSnippet>
               </div>
             );
           })}
-        </Col>
-      </GMSection>
+        </div>
+      </Section>
 
-      <GMSection>
-        <Col>
-          <GMSectionTitle>Using Themes</GMSectionTitle>
+      <Section>
+        <div>
+          <SectionTitle>Using Themes</SectionTitle>
           {data.usingThemes.map((obj, idx) => {
             return (
               <div key={idx}>
                 <p>{obj.step}</p>
-                <GMCodeSnippet>{obj.code}</GMCodeSnippet>
+                <CodeSnippet>{obj.code}</CodeSnippet>
               </div>
             );
           })}
-        </Col>
-      </GMSection>
+        </div>
+      </Section>
 
-      <Container fluid>
-        <Row>
+      <div>
+        <div>
           <div className="gm--home--banner">
             <h4>Deploy your first theme today!</h4>
             <Link to='/gallery' color="primary">View gallery</Link>
           </div>
-        </Row>
-      </Container>
+        </div>
+      </div>
     </div>
   )
 }

@@ -1,9 +1,8 @@
 import React from 'react'
 import Link from 'gatsby-link'
-import GMCard from './GMCard'
-import { Container, Row, Col, Button } from 'reactstrap';
+import Card from './Card'
 
-export default class GMGrid extends React.Component {
+export default class Grid extends React.Component {
 
   constructor(props) {
     super(props);
@@ -27,16 +26,16 @@ export default class GMGrid extends React.Component {
     }
 
     return (
-      <Container>
+      <div>
         {data.themes.map((obj, idx) => {
           let tileData = {obj, idx}
           return (
-            <Row key={idx}>
-              <GMCard data={tileData} />
-            </Row>
+            <div key={idx} className='gallery--grid--cell'>
+              <Card data={tileData} />
+            </div>
           );
         })}
-      </Container>
+      </div>
     );
   }
 }

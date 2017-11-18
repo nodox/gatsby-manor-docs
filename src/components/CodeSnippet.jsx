@@ -1,8 +1,6 @@
 import React from 'react';
-import { Container, Row, Col } from 'reactstrap';
 
-
-const GMCodeSnippet = (props) => {
+const CodeSnippet = (props) => {
   const { children } = props;
 
   return (
@@ -12,4 +10,4 @@ const GMCodeSnippet = (props) => {
   );
 }
 
-export default GMCodeSnippet;
+export default CodeSnippet;

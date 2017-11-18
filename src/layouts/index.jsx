@@ -2,8 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
-import GMNavbar from '../components/GMNavbar'
-import GMFooter from '../components/GMFooter';
+import Navbar from '../components/Navbar'
+import Footer from '../components/Footer';
 
 import '../styles/index.scss'
 
@@ -16,11 +16,11 @@ const TemplateWrapper = ({ children }) => (
         { name: 'keywords', content: 'sample, something' },
       ]}
     />
-    <GMNavbar />
+    <Navbar />
     <div className="">
       {children()}
     </div>
-    <GMFooter />
+    <Footer />
   </div>
 )
 

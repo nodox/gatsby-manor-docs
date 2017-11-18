@@ -1,8 +1,6 @@
 import React from 'react';
-import { Container, Row, Col } from 'reactstrap';
 
-
-const GMHighlight = (props) => {
+const Highlight = (props) => {
   const { data } = props;
 
   return (
@@ -13,4 +11,4 @@ const GMHighlight = (props) => {
   );
 }
 
-export default GMHighlight;
+export default Highlight;

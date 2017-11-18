@@ -1,6 +1,6 @@
 import React from 'react';
 
-const GMSectionTitle = (props) => {
+const SectionTitle = (props) => {
   const { children } = props;
 
   return (
@@ -10,4 +10,4 @@ const GMSectionTitle = (props) => {
   );
 }
 
-export default GMSectionTitle;
+export default SectionTitle;

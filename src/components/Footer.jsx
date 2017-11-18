@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-const GMFooter = (props) => {
+const Footer = (props) => {
   return (
     <div className="gm--footer--container">
       <span className="gm--footer--copyright">Copyright © 2017 Gatsby Manor</span>
@@ -9,4 +9,4 @@ const GMFooter = (props) => {
   );
 }
 
-export default GMFooter;
+export default Footer;

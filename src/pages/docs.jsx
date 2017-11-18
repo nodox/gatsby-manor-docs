@@ -1,8 +1,5 @@
 import React from 'react'
 import Link from 'gatsby-link'
-import { Container, Row, Col, Button } from 'reactstrap';
-
-import GMJumbotron from '../components/GMJumbotron';
 
 const Docs = () => {
   const data = {
@@ -25,24 +22,17 @@ const Docs = () => {
 
   return (
     <div>
-      <Container>
-        <Row>
-          <Col>
             <div>
               <h4>Theme Management</h4>
               <p>{data.productDescription.sectionOne}</p>
             </div>
-          </Col>
-        </Row>
-        <Row>
           <div>
             <h4>Deploy your fist theme today!</h4>
             <p className="lead">
-              <Button color="primary">View gallery</Button>
+              <Link color="primary">View gallery</Link>
             </p>
           </div>
-        </Row>
-      </Container>
+
 
     </div>
   )

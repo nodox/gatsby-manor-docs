@@ -1,7 +1,9 @@
-@import "node_modules/bootstrap/scss/bootstrap";
+@import "node_modules/normalize-scss/sass/normalize";
 
-
+@import "./_reset.scss";
+@import "./_navbar";
+@import "./_jumbotron";
 @import "./footer";
-@import "./jumbotron";
 @import "./home";
 @import "./gallery";
+@import "./docs";
