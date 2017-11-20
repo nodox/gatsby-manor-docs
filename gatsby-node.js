@@ -1,44 +1,37 @@
 const path = require('path');
+const allMarkdownSchema = require('./graphql/markdown.schema').allMarkdownSchema;
 
-exports.createPages = ({ boundActionCreators, graphql }) => {
+exports.createPages = async ({ boundActionCreators, graphql }) => {
   const { createPage } = boundActionCreators;
 
-  const docsTemplate = path.resolve(`src/templates/docs.js`);
-  return graphql(`{
-    allMarkdownRemark(
-      sort: { order: DESC, fields: [frontmatter___date] }
-      limit: 1000
-    ) {
-      edges {
-        node {
-          excerpt(pruneLength: 250)
-          html
-          id
-          timeToRead
-          frontmatter {
-            date
-            path
-            title
-          }
-        }
+  const docsCliTemplate = path.resolve(`src/templates/docs.cli.js`);
+  const themeDetailsTemplate = path.resolve(`src/templates/theme.details.js`);
+
+  const allMarkdown = await graphql(allMarkdownSchema);
+  if (allMarkdown.errors) {
+    console.error(allMarkdown.errors);
+
+    throw Error(allMarkdown.errors);
+  }
+
+  allMarkdown.data.allMarkdownRemark.edges.forEach(({ node }, index) => {
+    const nodePath = node.frontmatter.path;
+
+    const validPath = nodePath.includes('/docs/cli') || nodePath.includes('/themes');
+    if (validPath) {
+      let template;
+
+      if (nodePath.includes('/docs/cli/')){
+        template = docsCliTemplate;
+      } else if (nodePath.includes('/themes/')){
+        template = themeDetailsTemplate;
       }
-    }
-  }`)
-  .then(result => {
-    if (result.errors) {
-      return Promise.reject(result.errors)
-    }
 
-    const posts = result.data.allMarkdownRemark.edges;
-
-    // Create pages for each markdown file.
-    posts.forEach(({ node }, index) => {
       createPage({
-        path: node.frontmatter.path,
-        component: docsTemplate,
+        path: nodePath,
+        component: template,
       });
-    });
+    }
+  });
 
-    return posts;
-  })
 };
