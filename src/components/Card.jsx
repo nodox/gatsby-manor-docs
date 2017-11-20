@@ -6,11 +6,11 @@ import massivelyDesktopImage from '../images/massively-desktop.png'
 const Card = (props) => {
   const { data } = props;
   return (
-    <div className="gallery--grid--card"  key={data.idx}>
-      <img top width="100%" className="img-fluid" src={massivelyDesktopImage} alt="Card image cap" />
-      <div className="gallery--grid--card-body">
-        <span className="gallery--grid--card-title">{data.obj}</span>
-        <Link to="/" color="primary">Get Theme</Link>
+    <div className="card">
+      <img className="card--img" src={massivelyDesktopImage} alt="Card image cap" />
+      <div className="card--body">
+        <span className="card--title">{data.title}</span>
+        <Link to={data.path} className="card--action">Get Theme</Link>
       </div>
     </div>
   );
