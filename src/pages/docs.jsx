@@ -3,37 +3,73 @@ import Link from 'gatsby-link'
 
 const Docs = () => {
   const data = {
-    productDescription: {
-      sectionOne: '',
-      sectionTwo: '',
-      sectionThree: ''
-    },
+    guides: [
+      {
+        title: 'Cli Commands',
+        path: '/docs/cli'
 
-    hero: {
-      lead: {
-        title: 'Theme Gallery',
-        partOne: 'Developers deserve beautiful designs.',
-        partTwo: 'Find a theme. Let Jay do the rest.',
-        callToAction: '',
       },
-    },
-
+    ],
   }
 
   return (
     <div>
-            <div>
-              <h4>Theme Management</h4>
-              <p>{data.productDescription.sectionOne}</p>
-            </div>
-          <div>
-            <h4>Deploy your fist theme today!</h4>
-            <p className="lead">
-              <Link color="primary">View gallery</Link>
+      <div className="docs--banner">
+        <h2 className="docs--banner--title">Documentation</h2>
+      </div>
+      <div className="container mr-auto docs--grid">
+        <Link className="docs--card" to={data.guides[0].path}>
+          <div className="docs--card--body">
+            <h4 className="docs--card--title">{data.guides[0].title}</h4>
+            <p>
+              Never used a package manager before or just new to Yarn?
+              Let's get you up and running in just a couple of minutes.
+              Let's get you up and running in just a couple of minutes.
             </p>
+            <span className="card--action">Get Theme</span>
           </div>
-
-
+        </Link>
+        <Link className="docs--card" to={data.guides[0].path}>
+          <div className="docs--card--body">
+            <h4 className="docs--card--title">{data.guides[0].title}</h4>
+            <p>
+              Never used a package manager before or just new to Yarn?
+              Let's get you up and running in just a couple of minutes.
+            </p>
+            <span className="card--action">Get Theme</span>
+          </div>
+        </Link>
+        <Link className="docs--card" to={data.guides[0].path}>
+          <div className="docs--card--body">
+            <h4 className="docs--card--title">{data.guides[0].title}</h4>
+            <p>
+              Never used a package manager before or just new to Yarn?
+              Let's get you up and running in just a couple of minutes.
+            </p>
+            <span className="card--action">Get Theme</span>
+          </div>
+        </Link>
+        <Link className="docs--card" to={data.guides[0].path}>
+          <div className="docs--card--body">
+            <h4 className="docs--card--title">{data.guides[0].title}</h4>
+            <p>
+              Never used a package manager before or just new to Yarn?
+              Let's get you up and running in just a couple of minutes.
+            </p>
+            <span className="card--action">Get Theme</span>
+          </div>
+        </Link>
+        <Link className="docs--card" to={data.guides[0].path}>
+          <div className="docs--card--body">
+            <h4 className="docs--card--title">{data.guides[0].title}</h4>
+            <p>
+              Never used a package manager before or just new to Yarn?
+              Let's get you up and running in just a couple of minutes.
+            </p>
+            <span className="card--action">Get Theme</span>
+          </div>
+        </Link>
+      </div>
     </div>
   )
 }

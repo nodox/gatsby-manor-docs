@@ -1,17 +1,36 @@
-.docs--grid--cell {
-
-
+.docs--banner {
+  width: 100%;
+  text-align: center;
+  color: white;
+  background-color: #343a42;
+  padding: 2rem 0;
 }
 
-// @include media-breakpoint-up(xs) { ... }
-// @include media-breakpoint-up(sm) { ... }
-// @include media-breakpoint-up(md) { ... }
-// @include media-breakpoint-up(lg) { ... }
-// @include media-breakpoint-up(xl) { ... }
-//
-// // Example usage:
-// @include media-breakpoint-up(sm) {
-//   .some-class {
-//     display: block;
-//   }
-// }
+.docs--banner--title {
+  padding: 1rem 0;
+  font-size: 3.5rem;
+  font-weight: 300;
+}
+.docs--grid {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  padding: 40px;
+}
+
+.docs--card {
+  display: block;
+  width: 300px;
+  border: 1px solid gray;
+  text-decoration: none;
+  color: black;
+  margin: 0 0 40px 0;
+
+  @media (min-width: $breakpoint-md) {
+    margin: 0 0 40px 40px;
+  }
+}
+
+.docs--card--body {
+  padding: 20px;
+}
