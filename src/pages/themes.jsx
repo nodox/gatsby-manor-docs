@@ -19,24 +19,6 @@ export default class Themes extends React.Component {
         { title: 'Massively',
           path: "/themes/massively"
         },
-        { title: 'Etheral',
-          path: "/themes/massively"
-        },
-        { title: 'Exasper',
-          path: "/themes/massively"
-        },
-        { title: 'Dimensions',
-          path: "/themes/massively"
-        },
-        { title: 'Stellar',
-          path: "/themes/massively"
-        },
-        { title: 'West',
-          path: "/themes/massively"
-        },
-        { title: 'Apple',
-          path: "/themes/massively"
-        },
       ],
       hero: {
         lead: {
