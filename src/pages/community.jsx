@@ -33,20 +33,21 @@ const Community = () => {
         <div>
           <h2 className="">Stack Overflow</h2>
           <p>For debugging the community uses Stack Overflow to ask questions.
-            Visit <a href="https://stackoverflow.com">Stack Overflow</a> to
-            read current questions tagged with gatsby-manor or create your own.
+            Visit to read <a href="https://stackoverflow.com/questions/tagged/gatsby-manor">current questions</a> tagged with gatsby-manor or <a href="https://stackoverflow.com/questions/ask?tags=gatsby-manor">create your own</a>.
           </p>
         </div>
         <div>
           <h2 className="">Github</h2>
           <p>Any questions about the Jay, Themes, or Gatsby Manor can be directed
-            to Github. Create an issue detailing your problem and a core member
-            will join the conversation. PR's are welcome!
+            to <a href="https://github.com/gatsbymanor">Github</a>. Find the repo you
+            are interested in and create an issue detailing your problem. A core member
+            will join the conversation when they are free. PR's are welcome for easy fixes
+            or brand new features!
           </p>
         </div>
         <div>
           <h2 className="">Twitter</h2>
-          <p>Need our attention? Tweet us @GatsbyManor with your news. Tell us
+          <p>Need our attention? Tweet us <a href="https://twitter.com/TheGatsbyManor">@TheGatsbyManor</a> with your news. Tell us
             what cool things you are building. We love to publish the communities'
             creations on the site!
           </p>
