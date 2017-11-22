@@ -13,7 +13,7 @@ const IndexPage = () => {
         partTwo: 'Find a theme. Let Jay do the rest.',
         callToAction: {
           text: 'View Gallery',
-          path: '/gallery',
+          path: '/themes',
         },
       },
     },
@@ -104,7 +104,7 @@ const IndexPage = () => {
 
       <div className="home--banner">
         <h4 className="home--banner--lead">Deploy your first theme today!</h4>
-        <Link to='/gallery' className="home--banner--action -primary">View gallery</Link>
+        <Link to='/themes' className="home--banner--action -primary">View gallery</Link>
       </div>
     </div>
   );
