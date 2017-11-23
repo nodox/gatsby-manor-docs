@@ -1,6 +1,7 @@
-@import "node_modules/normalize-scss/sass/normalize";
+// Bootstrap css reset
+@import "./_reboot";
 
-
+// Additional reset: opt-in format
 @import "./_reset";
 @import "./_breakpoints";
 @import "./_grid";
