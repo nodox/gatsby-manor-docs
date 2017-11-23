@@ -3,7 +3,7 @@ import Link from 'gatsby-link'
 import Jumbotron from '../components/Jumbotron';
 import Card from '../components/Card';
 
-import '../styles/index.scss';
+import '../styles/themes.scss';
 
 export default class Themes extends React.Component {
 

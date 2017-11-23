@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'gatsby-link';
 import classNames from 'classnames';
+import "../styles/_jumbotron.scss";
 
 
 const Jumbotron = (props) => {

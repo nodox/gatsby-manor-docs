@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import '../styles/docs.scss'
 
 export default class Docs extends React.Component {
   constructor() {

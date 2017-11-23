@@ -4,6 +4,8 @@ import Highlight from '../components/Highlight';
 import Jumbotron from '../components/Jumbotron';
 import CodeSnippet from '../components/CodeSnippet';
 
+import "../styles/home.scss";
+
 const IndexPage = () => {
   const data = {
     hero: {

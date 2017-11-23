@@ -1,4 +1,6 @@
 // https://github.com/twbs/bootstrap/blob/v4-dev/scss/_navbar.scss
+@import '_breakpoints';
+
 .navbar {
   position: relative;
   display: flex;
@@ -33,7 +35,7 @@
 .navbar-overflow {
   overflow-x: auto;
   overflow-y: hidden;
-  
+
   @media (max-width: $breakpoint-sm) {
     mask-image: -webkit-linear-gradient(to right, transparent, black 20px, black 90%, transparent);
     mask-image: -moz-linear-gradient(to right, transparent, black 20px, black 90%, transparent);

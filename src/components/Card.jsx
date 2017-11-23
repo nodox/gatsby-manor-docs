@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'gatsby-link';
 
 import massivelyDesktopImage from '../images/massively-desktop.png'
+import "../styles/_card.scss";
 
 const Card = (props) => {
   const { data } = props;

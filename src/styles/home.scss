@@ -1,7 +1,9 @@
+@import '_breakpoints';
+
 .home--highlight {
   display: flex;
   flex-flow: column nowrap;
-  
+
   @media (min-width: $breakpoint-sm) {
     flex-flow: row nowrap;
   }

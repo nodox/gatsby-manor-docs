@@ -1,5 +1,7 @@
 import React from 'react';
 
+import "../styles/_snippets.scss";
+
 const CodeSnippet = (props) => {
   const { children } = props;
 

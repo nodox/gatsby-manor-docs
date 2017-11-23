@@ -1,0 +1,25 @@
+// html {
+//   height: 100%;
+// }
+//
+// body {
+//   height: 100%;
+//   overflow: hidden;
+// }
+
+.theme--details {
+  height: 100vh;
+  display: flex;
+}
+
+.theme--details--main {
+  // height: 50%;
+  overflow: auto;
+  flex: 1 0 75%;
+}
+
+.theme--details--sidemenu {
+  flex: 1 0 20%;
+  overflow: auto;
+
+}

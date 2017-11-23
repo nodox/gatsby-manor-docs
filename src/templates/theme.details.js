@@ -1,5 +1,7 @@
 import React from 'react';
 
+import "../styles/themes-detail.scss";
+
 export default function Template({ data }) {
   const { markdownRemark: post } = data;
   return (
