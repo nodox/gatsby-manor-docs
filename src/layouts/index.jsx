@@ -7,7 +7,7 @@ import Footer from '../components/Footer';
 
 import '../styles/index.scss'
 
-const TemplateWrapper = ({ children }) => (
+const TemplateWrapper = (props) => (
   <div>
     <Helmet
       title="Gatsby Default Starter"
@@ -18,9 +18,9 @@ const TemplateWrapper = ({ children }) => (
     />
     <Navbar />
     <div className="">
-      {children()}
+      {props.children()}
     </div>
-    <Footer />
+    <Footer path={props.location.pathname}/>
   </div>
 )
 
