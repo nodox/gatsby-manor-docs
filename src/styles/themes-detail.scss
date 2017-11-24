@@ -1,25 +1,76 @@
-// html {
-//   height: 100%;
-// }
-//
-// body {
-//   height: 100%;
-//   overflow: hidden;
-// }
+// https://www.bitovi.com/blog/use-flexbox-to-create-a-sticky-header-and-sidebar-with-flexible-content
+
+@import '_breakpoints';
 
 .theme--details {
-  height: 100vh;
-  display: flex;
+
+  @media (min-width: $breakpoint-sm) {
+    height: 77vh;
+    overflow: hidden;
+    display: flex;
+    margin: 0;
+  }
 }
 
+.theme--details--column {
+  display: flex;
+  flex-direction: column;
+}
+
+.theme--details--img--small {
+  max-width: 100%;
+  height: auto;
+
+  display: block;
+
+  @media (min-width: $breakpoint-sm) {
+    display: none;
+  }
+}
+
+.theme--details--img--large {
+  max-width: 100%;
+  height: auto;
+  display: none;
+
+  @media (min-width: $breakpoint-sm) {
+    display: block;
+  }
+}
+
+
 .theme--details--main {
-  // height: 50%;
-  overflow: auto;
-  flex: 1 0 75%;
+  overflow-y: scroll;
+
+  @media (min-width: $breakpoint-sm) {
+    flex: 1 0 60%;
+  }
+
+  @media (min-width: $breakpoint-md) {
+
+  }
+  @media (min-width: $breakpoint-lg) {
+
+  }
 }
 
 .theme--details--sidemenu {
-  flex: 1 0 20%;
-  overflow: auto;
+  overflow-y: scroll;
+  width: 100%;
+  padding: 1rem;
+  font-size: 0.75rem;
 
+
+  @media (min-width: $breakpoint-sm) {
+    font-size: 1rem;
+  }
+
+  @media (min-width: $breakpoint-md) {
+    font-size: 1.2rem;
+  }
+
+}
+
+.theme--details--sidemenu--title {
+  text-align: center;
 }
