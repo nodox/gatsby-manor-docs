@@ -12,33 +12,17 @@ export default class Footer extends React.Component {
     }
   }
 
-  componentDidMount() {
-    this.setState({
-      enableSticky: this.shouldBeSticky()
-    });
-  }
-
   componentWillReceiveProps(nextProps) {
     this.setState((prevState, nextProps) => {
+      let enable = nextProps.path.includes('/docs/cli/')
+                    || nextProps.path.includes('/docs')
+                    || nextProps.path.includes('/community');
+
       return {
         path: nextProps.path,
-        enableSticky: this.shouldBeSticky(),
+        enableSticky: enable,
       };
     });
-  }
-
-  offset(el) {
-    var rect = el.getBoundingClientRect(),
-    scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
-    scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    return { top: rect.top + scrollTop, left: rect.left + scrollLeft }
-  }
-
-  shouldBeSticky() {
-    let footer = document.querySelector('.footer--container');
-    let bottomEdge = this.offset(footer).top + footer.getBoundingClientRect().height;
-    var isSticky =  bottomEdge < window.outerHeight ? true : false;
-    return isSticky;
   }
 
   render() {
