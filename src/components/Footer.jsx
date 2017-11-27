@@ -20,7 +20,7 @@ export default class Footer extends React.Component {
 
       return {
         path: nextProps.path,
-        enableSticky: enable,
+        enableSticky: false,
       };
     });
   }

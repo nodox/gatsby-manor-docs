@@ -1,7 +1,7 @@
 .jumbotron {
   padding: 4rem  2rem;
-  background-color: #343a42;
-  color: white;
+  background-color: #000;
+  color: #999;
 
   &.-center {
     text-align: center;
@@ -9,6 +9,7 @@
 }
 
 .jumbotron--title {
+  color: white;
   font-size: 4.5rem;
   font-weight: 300;
   line-height: 1.2;

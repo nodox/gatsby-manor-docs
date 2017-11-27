@@ -4,35 +4,33 @@ import Link from 'gatsby-link';
 import "../styles/_navbar.scss";
 
 const Navbar = (props) => {
-  const { data } = props;
+  const { data, location } = props;
   const links = [
-    { path: '/',
-      title: 'Home',
-    },
     { path: '/themes',
       title: 'Themes',
     },
-    { path: '/docs',
-      title: 'Docs',
+    { path: '/contribute',
+      title: 'Contribute',
     },
-    { path: '/community',
-      title: 'Community',
-    },
-    { path: '/github',
-      title: 'Github',
+    { path: '/donate',
+      title: 'Donate',
     },
   ]
 
   return (
     <nav className="navbar navbar-dark">
       <a href="/" className="navbar-brand">Gatsby Manor</a>
-      <ul className="navbar-nav navbar-overflow">
+      <ul className="navbar-nav">
         {links.map((obj, idx) => {
-          return (
-            <li className="nav-item" key={idx}>
-              <Link className="nav-link" to={obj.path}>{obj.title}</Link>
-            </li>
-          );
+          if (location.pathname === '/') {
+            return;
+          } else {
+            return (
+              <li className="nav-item" key={idx}>
+                <Link className="nav-link" to={obj.path}>{obj.title}</Link>
+              </li>
+            );
+          }
         })}
       </ul>
     </nav>

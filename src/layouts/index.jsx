@@ -16,7 +16,7 @@ const TemplateWrapper = (props) => (
         { name: 'keywords', content: 'sample, something' },
       ]}
     />
-    <Navbar />
+    <Navbar location={props.location}/>
     <div className="">
       {props.children()}
     </div>

@@ -1,4 +1,11 @@
 @import '_breakpoints';
+@import '_highlight';
+
+.home-container {
+  padding: 2.5rem;
+  background: black;
+  color: white;
+}
 
 .home--highlight {
   display: flex;
@@ -10,7 +17,8 @@
 }
 
 .home--section {
-  padding-top: 30px;
+  padding: 1.5rem;
+  text-align: center;
 }
 
 .home--banner {
