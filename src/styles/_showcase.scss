@@ -109,9 +109,12 @@
     vertical-align: middle;
     padding: .5rem 1rem;
     border-radius: .2rem;
-    // background-color: #ffc107;
     background-color: #563d7c;
+  }
 
+  &:hover {
+    color: white;
+    text-decoration: underline;
   }
 
 }
