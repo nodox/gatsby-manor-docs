@@ -48,7 +48,7 @@ class SideNav extends React.Component {
               } else {
                 return (
                   <li className="sidenav--list--item" key={idx} onClick={() => this.props.enableSideMenu(false)}>
-                    <Link className="" to={obj.path}>{obj.title}</Link>
+                    <Link className="sidenav--list--item--link" to={obj.path}>{obj.title}</Link>
                   </li>
                 );
               }

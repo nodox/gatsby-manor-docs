@@ -66,9 +66,14 @@
   font-size: 1rem;
   cursor: pointer;
   text-decoration: none;
+}
 
-  a {
+.sidenav--list--item--link {
+  color: rgba(255, 255, 255, 0.8);
+
+  &:hover {
     color: white;
+    text-decoration: underline;
   }
 }
 
