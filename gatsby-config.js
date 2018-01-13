@@ -6,6 +6,8 @@ module.exports = {
   plugins: [
     'gatsby-plugin-catch-links',
     `gatsby-plugin-react-helmet`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-sass`,
       options: {
@@ -18,6 +20,13 @@ module.exports = {
         name: 'pages',
         path: `${__dirname}/content`,
       },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images/`
+      }
     },
     {
       resolve: 'gatsby-transformer-remark',

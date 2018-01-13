@@ -52,38 +52,6 @@
   position: absolute;
 }
 
-.showcase--images .showcase--img {
-  animation-name: showCaseFadeInOut;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
-  animation-duration: 8s;
-}
-
-.showcase--images img:nth-of-type(4) {
-  animation-delay: 6s;
-}
-
-.showcase--images img:nth-of-type(3) {
-  animation-delay: 4s;
-}
-
-.showcase--images img:nth-of-type(2) {
-  animation-delay: 2s;
-}
-
-.showcase--images img:nth-of-type(1) {
-  animation-delay: 0;
-}
-
-// http://css3.bradshawenterprises.com/cfimg/#cfimg3
-@keyframes showCaseFadeInOut {
-  0%  { opacity: 1; }
-  17% { opacity: 1; }
-  25% { opacity: 0; }
-  92% { opacity: 0; }
-  100% { opacity: 1; }
-}
-
 .showcase--cta {
   padding: 2rem;
 

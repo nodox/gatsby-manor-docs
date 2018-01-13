@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'gatsby-link';
 import classNames from 'classnames';
+import Img from "gatsby-image";
 
 import "../styles/_showcase.scss";
 
@@ -9,11 +10,8 @@ import parallelismImg from '../images/parallelism.jpg'
 import heliosImg from '../images/helios.jpg'
 import identityImg from '../images/identity.jpg'
 
-
-
-
 const Showcase = (props) => {
-  const { data, } = props;
+  const { data, images } = props;
 
   let ActionButton = null;
 
@@ -31,15 +29,23 @@ const Showcase = (props) => {
     'showcase': true,
   });
 
+  var imagesArray = [];
+  Object.keys(images).forEach(key => {
+    imagesArray = [...imagesArray, key];
+  });
+
+  var imageToMount = imagesArray[Math.floor(Math.random() * imagesArray.length)];
 
   return (
     <div className={showcaseClassses}>
       <div className="showcase--images">
         <div className="showcase--gradient">
-          <img className="showcase--img" src={lensImg} />
-          <img className="showcase--img" src={parallelismImg} />
-          <img className="showcase--img" src={heliosImg} />
-          <img className="showcase--img" src={identityImg} />
+          <Img
+            className="showcase--img"
+            title="Theme image"
+            alt="title theme"
+            sizes={images[imageToMount].sizes}
+          />
         </div>
       </div>
 
