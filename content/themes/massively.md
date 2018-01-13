@@ -5,7 +5,7 @@ title: "Massively"
 ---
 
 ### Overview
-The Massively theme positions itself as the both a blog and a platform to promote your personal brand. You can store markdown in the contents folder or use external APIs as your data source. As with all our themes customization is endless.
+The Massively theme positions itself as both a blog and a platform to promote your personal brand. You can store markdown in the contents folder or use external APIs as your data source. As with all our themes, customization is endless.
 
 ### Features
 Responsive Design

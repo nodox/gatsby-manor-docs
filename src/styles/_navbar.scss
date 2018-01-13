@@ -15,6 +15,7 @@
 }
 
 .navbar-brand {
+  margin: 0 auto;
   flex: 0 0 10%;
   display: block;
   color: white;
@@ -22,14 +23,22 @@
   text-decoration: none;
   white-space: nowrap;
   cursor: pointer;
+
+  @media (min-width: $breakpoint-sm) {
+    margin: 0;
+  }
 }
 
 .navbar-nav {
-  display: flex;
-  align-items: center;
-  list-style: none;
-  padding: 0;
-  margin: 0;
+  display: none;
+
+  @media (min-width: $breakpoint-sm) {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
 }
 
 .navbar-overflow {
@@ -55,4 +64,24 @@
 .nav-link {
   color: hsla(0, 0%, 100%, .8);
   text-decoration: none;
+}
+
+.navbar--sidemenu--button {
+  cursor: pointer;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  right: 0;
+  width: 80px;
+  height: 80px;
+  font-size: 2.5rem;
+  color: white;
+
+  @media (min-width: $breakpoint-sm) {
+    display: none;
+  }
+
+  &.-hidden {
+    display: none;
+  }
 }

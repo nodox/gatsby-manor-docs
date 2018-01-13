@@ -3,3 +3,67 @@
 .themes {
   padding-top: 40px;
 }
+
+.themes-items {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: black;
+}
+
+.themes-card {
+  position: relative;
+  width: 100%;
+  height: auto;
+  @media (min-width: $breakpoint-md) {
+    flex: 1 50%;
+  }
+
+}
+
+.theme-card--name {
+  color: white;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 80px;
+  background: linear-gradient(to top, transparent, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.5) 70%, transparent);
+  display: flex;
+  flex-direction: column;
+
+  .name {
+    padding-left: 1rem;
+    font-size: 1.5rem;
+    margin: auto 0 0.5rem 0;
+
+    @media (min-width: $breakpoint-sm) {
+      font-size: 2rem;
+    }
+  }
+}
+
+.themes-placeholder {
+  background-color: black;
+}
+
+.themes-contribute {
+  border: 1px solid rgba(153, 153, 153, 0.4);
+  font-size: 1rem;
+  background-color: black;
+  color: white;
+  width: 100%;
+  height: auto;
+
+  display: flex;
+
+}
+
+.themes-contribute-description {
+  color: white;
+  display: inline-block;
+  align-self: center;
+  margin: auto;
+
+  &:hover {
+    color: white;
+  }
+}

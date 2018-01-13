@@ -2,13 +2,14 @@
 
 @import '_breakpoints';
 
+$sideMenuWidth: 100%;
+$sideMenuWidth-sm: 400px;
+
 .theme--details {
+  position: relative;
 
   @media (min-width: $breakpoint-sm) {
-    height: 77vh;
-    overflow: hidden;
     display: flex;
-    margin: 0;
   }
 }
 
@@ -42,8 +43,18 @@
 .theme--details--main {
   overflow-y: scroll;
 
+  -webkit-transition: right 0.5s;
+  transition: right 0.5s;
+
+  &.-fullscreen {
+    right: 0;
+  }
+
   @media (min-width: $breakpoint-sm) {
     flex: 1 0 60%;
+    position: relative;
+    right: $sideMenuWidth-sm;
+    z-index: 10;
   }
 
   @media (min-width: $breakpoint-md) {
@@ -56,13 +67,22 @@
 
 .theme--details--sidemenu {
   overflow-y: scroll;
-  width: 100%;
   padding: 1rem;
   font-size: 0.75rem;
 
+  width: $sideMenuWidth;
+  background: white;
+  height: 100%;
 
   @media (min-width: $breakpoint-sm) {
     font-size: 1rem;
+    width: $sideMenuWidth-sm;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 0;
+
   }
 
   @media (min-width: $breakpoint-md) {
@@ -71,6 +91,45 @@
 
 }
 
+
+.theme--details--sidemenu--close {
+  display: none;
+
+  @media (min-width: $breakpoint-sm) {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 10px;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    font-size: 2.4rem;
+    text-align: center;
+  }
+}
+
+.theme--details--main--open {
+  display: none;
+
+  @media (min-width: $breakpoint-sm) {
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    right: 0;
+    width: 80px;
+    height: 80px;
+    font-size: 3rem;
+    color: white;
+  }
+
+  &.-dark {
+    color: black;
+  }
+}
+
 .theme--details--sidemenu--title {
+  padding: 2rem 0;
   text-align: center;
 }

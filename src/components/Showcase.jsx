@@ -4,14 +4,11 @@ import classNames from 'classnames';
 
 import "../styles/_showcase.scss";
 
-import massivelyImg from '../images/massively.png';
-import dimensionImg from '../images/dimension.png';
-import fortyImg from '../images/forty.png';
-import identityImg from '../images/identity.png';
-import etherealImg from '../images/ethereal.png';
-import parallelismImg from '../images/parallelism.png'
-import lensImg from '../images/lens.png'
-import heliosImg from '../images/helios.png'
+import lensImg from '../images/lens.jpg'
+import parallelismImg from '../images/parallelism.jpg'
+import heliosImg from '../images/helios.jpg'
+import identityImg from '../images/identity.jpg'
+
 
 
 
