@@ -2,17 +2,6 @@ import React from 'react';
 import classNames from 'classnames';
 import Img from "gatsby-image";
 
-import massivelyImage from '../images/massively.jpg'
-import massivelyFullImage from '../images/massively_full.jpg'
-import photonImage from '../images/photon.jpg'
-import photonFullImage from '../images/photon_full.jpg'
-import tessellateImage from '../images/tessellate.jpg'
-import tessellateFullImage from '../images/tessellate_full.jpg'
-import dimensionImage from '../images/dimension.jpg'
-import lensImage from '../images/lens.jpg'
-import identityImage from '../images/identity.jpg'
-
-
 import "../styles/themes-detail.scss";
 
 class ThemeDetailsTemplate extends React.Component {
