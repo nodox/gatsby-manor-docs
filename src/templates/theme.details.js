@@ -1,5 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
+import Img from "gatsby-image";
 
 import massivelyImage from '../images/massively.jpg'
 import massivelyFullImage from '../images/massively_full.jpg'
@@ -31,6 +32,7 @@ class ThemeDetailsTemplate extends React.Component {
   }
 
   render() {
+    console.log(this.props);
     let sideMenuClasses = classNames({
       'theme--details--column': true,
       'theme--details--sidemenu': true,
@@ -51,24 +53,24 @@ class ThemeDetailsTemplate extends React.Component {
     var useDarkOpenMenuClass = false;
 
     if (location.pathname.includes('massively')) {
-      displayImage = massivelyFullImage;
-      displayImageSmall = massivelyImage;
+      displayImage = data.massivelyFullImage.sizes;
+      displayImageSmall = data.massivelyImage.sizes;
     } else if (location.pathname.includes('dimension')) {
-      displayImage = dimensionImage;
-      displayImageSmall = dimensionImage;
+      displayImage = data.dimensionImage.sizes;
+      displayImageSmall = data.dimensionImage.sizes;
     } else if (location.pathname.includes('lens')) {
-      displayImage = lensImage;
-      displayImageSmall = lensImage;
+      displayImage = data.lensImage.sizes;
+      displayImageSmall = data.lensImage.sizes;
       useDarkOpenMenuClass = true;
     } else if (location.pathname.includes('photon')) {
-      displayImage = photonFullImage;
-      displayImageSmall = photonImage;
+      displayImage = data.photonFullImage.sizes;
+      displayImageSmall = data.photonImage.sizes;
     } else if (location.pathname.includes('identity')) {
-      displayImage = identityImage;
-      displayImageSmall = identityImage;
+      displayImage = data.identityImage.sizes;
+      displayImageSmall = data.identityImage.sizes;
     } else if (location.pathname.includes('tessellate')) {
-      displayImage = tessellateFullImage;
-      displayImageSmall = tessellateImage;
+      displayImage = data.tessellateFullImage.sizes;
+      displayImageSmall = data.tessellateImage.sizes;
     }
 
     let openMenuButtonClasses = classNames({
@@ -81,8 +83,20 @@ class ThemeDetailsTemplate extends React.Component {
       <div className="theme--details">
         <div className={themeDetailsMainClasses}>
           <div className={openMenuButtonClasses} onClick={() => this.toggleSidemenu()}>&#9776;</div>
-          <img className="theme--details--img--small" src={displayImageSmall} alt="Card image cap" />
-          <img className="theme--details--img--large" src={displayImage} alt="Card image cap" />
+          <div className="theme--details--img--small">
+            <Img
+              title="Theme details image"
+              alt="title theme"
+              sizes={displayImageSmall}
+            />
+          </div>
+          <div className="theme--details--img--large">
+            <Img
+              title="Theme details image"
+              alt="title theme"
+              sizes={displayImage}
+            />
+          </div>
         </div>
         <div className={sideMenuClasses}>
           <div className="theme--details--sidemenu--close" onClick={() => this.toggleSidemenu()}>&times;</div>
@@ -97,13 +111,58 @@ class ThemeDetailsTemplate extends React.Component {
 export default ThemeDetailsTemplate;
 
 export const pageQuery = graphql`
-  query ThemeDetailsPostByPath($path: String!) {
+  query themeDetailImagesQueryAndThemeDetailsPostByPath($path: String!) {
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
       frontmatter {
         path
         title
       }
-    }
-  }
+    },
+    massivelyImage: imageSharp(id: { regex: "/massively/" }) {
+      sizes(maxWidth: 1670 ) {
+        ...GatsbyImageSharpSizes
+      }
+    },
+    massivelyFullImage: imageSharp(id: { regex: "/massively_full/" }) {
+      sizes(maxWidth: 1670 ) {
+        ...GatsbyImageSharpSizes
+      }
+    },
+    identityImage: imageSharp(id: { regex: "/identity/" }) {
+      sizes(maxWidth: 1670 ) {
+        ...GatsbyImageSharpSizes
+      }
+    },
+    dimensionImage: imageSharp(id: { regex: "/dimension/" }) {
+      sizes(maxWidth: 1670 ) {
+        ...GatsbyImageSharpSizes
+      }
+    },
+    photonFullImage: imageSharp(id: { regex: "/photon_full/" }) {
+      sizes(maxWidth: 1670 ) {
+        ...GatsbyImageSharpSizes
+      }
+    },
+    photonImage: imageSharp(id: { regex: "/photon/" }) {
+      sizes(maxWidth: 1670 ) {
+        ...GatsbyImageSharpSizes
+      }
+    },
+    tessellateFullImage: imageSharp(id: { regex: "/tessellate_full/" }) {
+      sizes(maxWidth: 1670 ) {
+        ...GatsbyImageSharpSizes
+      }
+    },
+    tessellateImage: imageSharp(id: { regex: "/tessellate/" }) {
+      sizes(maxWidth: 1670 ) {
+        ...GatsbyImageSharpSizes
+      }
+    },
+    lensImage: imageSharp(id: { regex: "/lens/" }) {
+      sizes(maxWidth: 1670 ) {
+        ...GatsbyImageSharpSizes
+      }
+    },
+  },
 `;
