@@ -15,6 +15,8 @@
     "gatsby-source-filesystem": "^1.5.8",
     "gatsby-transformer-remark": "^1.7.21",
     "gatsby-transformer-sharp": "^1.6.16",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
     "react-icons": "^2.2.7",
     "react-test-renderer": "^16.2.0"
   },
@@ -27,9 +29,17 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.js\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "enzyme-to-json": "^3.3.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^22.0.6",
     "prettier": "^1.8.1"
   }
 }
