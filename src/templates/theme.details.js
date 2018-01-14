@@ -21,7 +21,6 @@ class ThemeDetailsTemplate extends React.Component {
   }
 
   render() {
-    console.log(this.props);
     let sideMenuClasses = classNames({
       'theme--details--column': true,
       'theme--details--sidemenu': true,
