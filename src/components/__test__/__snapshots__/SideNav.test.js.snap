@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SideNav /> should render correctly 1`] = `
+<div>
+  <div
+    className="sidenav--background"
+  />
+  <nav
+    className="sidenav--menu"
+  >
+    <div
+      className="sidenav--close--button"
+      onClick={[Function]}
+    >
+      ×
+    </div>
+    <span
+      className="sidenav--brand"
+    >
+      Gatsby Manor
+    </span>
+    <ul
+      className="sidenav--list"
+    >
+      <li
+        className="sidenav--list--item"
+        key="0"
+        onClick={[Function]}
+      >
+        <GatsbyLink
+          className="sidenav--list--item--link"
+          to="/themes"
+        >
+          Themes
+        </GatsbyLink>
+      </li>
+      <li
+        className="sidenav--list--item"
+        key="1"
+        onClick={[Function]}
+      >
+        <GatsbyLink
+          className="sidenav--list--item--link"
+          to="/contribute"
+        >
+          Contribute
+        </GatsbyLink>
+      </li>
+      <li
+        className="sidenav--list--item"
+        key="2"
+        onClick={[Function]}
+      >
+        <GatsbyLink
+          className="sidenav--list--item--link"
+          to="/pricing"
+        >
+          Pricing
+        </GatsbyLink>
+      </li>
+    </ul>
+  </nav>
+</div>
+`;
