@@ -1,5 +1,5 @@
 import React from 'react';
-import SideNav from '../SideNav';
+import SideNav from '../../src/components/SideNav';
 
 describe('<SideNav />', () => {
   const testData = {

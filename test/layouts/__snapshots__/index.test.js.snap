@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TemplateWrapper /> should render correctly 1`] = `
+<div>
+  <HelmetWrapper
+    defer={true}
+    encodeSpecialCharacters={true}
+    meta={
+      Array [
+        Object {
+          "content": "Sample",
+          "name": "description",
+        },
+        Object {
+          "content": "sample, something",
+          "name": "keywords",
+        },
+      ]
+    }
+    title="Gatsby Default Starter"
+  />
+  <Navbar
+    enableSideMenu={[Function]}
+    location={
+      Object {
+        "pathname": "/home",
+      }
+    }
+  />
+  <div
+    className=""
+  />
+  <SideNav
+    displayMenu={false}
+    enableSideMenu={[Function]}
+    location={
+      Object {
+        "pathname": "/home",
+      }
+    }
+  />
+  <Footer
+    path="/home"
+  />
+</div>
+`;

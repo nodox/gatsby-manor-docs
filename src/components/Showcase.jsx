@@ -5,11 +5,6 @@ import Img from "gatsby-image";
 
 import "../styles/_showcase.scss";
 
-import lensImg from '../images/lens.jpg'
-import parallelismImg from '../images/parallelism.jpg'
-import heliosImg from '../images/helios.jpg'
-import identityImg from '../images/identity.jpg'
-
 const Showcase = (props) => {
   const { data, images } = props;
 

@@ -53,9 +53,9 @@ exports[`<SideNav /> should render correctly 1`] = `
       >
         <GatsbyLink
           className="sidenav--list--item--link"
-          to="/pricing"
+          to="/docs"
         >
-          Pricing
+          Docs
         </GatsbyLink>
       </li>
     </ul>

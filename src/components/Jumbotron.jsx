@@ -9,7 +9,6 @@ const Jumbotron = (props) => {
 
   let ActionButton = null;
 
-  // CallTAction present?
   if(!!data.lead.callToAction) {
     ActionButton = (
       <p className="jumbotron--lead">

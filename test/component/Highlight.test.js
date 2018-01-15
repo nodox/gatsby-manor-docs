@@ -1,5 +1,5 @@
 import React from 'react';
-import Highlight from '../Highlight';
+import Highlight from '../../src/components/Highlight';
 
 describe('<Highlight />', () => {
   const testData = {

@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ThemeDetailsTemplate /> should render 1`] = `
+<div
+  className="theme--details"
+>
+  <div
+    className="theme--details--column theme--details--main"
+  >
+    <div
+      className="theme--details--main--open"
+      onClick={[Function]}
+    >
+      ☰
+    </div>
+    <div
+      className="theme--details--img--small"
+    >
+      <Image
+        alt="title theme"
+        fadeIn={true}
+        sizes={null}
+        title="Theme details image"
+      />
+    </div>
+    <div
+      className="theme--details--img--large"
+    >
+      <Image
+        alt="title theme"
+        fadeIn={true}
+        sizes={null}
+        title="Theme details image"
+      />
+    </div>
+  </div>
+  <div
+    className="theme--details--column theme--details--sidemenu"
+  >
+    <div
+      className="theme--details--sidemenu--close"
+      onClick={[Function]}
+    >
+      ×
+    </div>
+    <h1
+      className="theme--details--sidemenu--title"
+    />
+    <div
+      className=""
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": Object {},
+        }
+      }
+    />
+  </div>
+</div>
+`;

@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Footer /> should render correctly 1`] = `
+<Footer>
+  <div
+    className="footer--container"
+  >
+    <span
+      className="footer--copyright"
+    >
+      Copyright © 2017-2018 Gatsby Manor
+    </span>
+  </div>
+</Footer>
+`;
