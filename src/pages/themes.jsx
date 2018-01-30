@@ -1,7 +1,6 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import Jumbotron from '../components/Jumbotron'
-import Card from '../components/Card'
 import Img from "gatsby-image";
 
 import '../styles/themes.scss';
