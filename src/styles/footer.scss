@@ -4,6 +4,10 @@
   background-color: black;
   display: flex;
   text-align: center;
+
+  &.-hidden {
+    display: none;
+  }
 }
 
 .footer--copyright {

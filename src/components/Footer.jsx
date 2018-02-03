@@ -9,8 +9,10 @@ export default class Footer extends React.Component {
   }
 
   render() {
+
     let footerClass = classNames({
       'footer--container': true,
+      '-hidden': this.props.path.includes('/docs')
     });
 
     return (
