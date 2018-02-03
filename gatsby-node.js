@@ -4,7 +4,7 @@ const allMarkdownSchema = require('./graphql/markdown.schema').allMarkdownSchema
 exports.createPages = async ({ boundActionCreators, graphql }) => {
   const { createPage } = boundActionCreators;
 
-  const docsCliTemplate = path.resolve(`src/templates/docs.cli.js`);
+  const docsDetailsTemplate = path.resolve(`src/templates/docs.details.js`);
   const themeDetailsTemplate = path.resolve(`src/templates/theme.details.js`);
 
   const allMarkdown = await graphql(allMarkdownSchema);
@@ -14,32 +14,34 @@ exports.createPages = async ({ boundActionCreators, graphql }) => {
     throw Error(allMarkdown.errors);
   }
 
-  const allDocsCliPaths = allMarkdown.data.allMarkdownRemark.edges
-  .filter(({ node }) => {
-    return node.frontmatter.path.includes('/docs/cli');
-  }).map(({ node }) => {
-    return {
-      path: node.frontmatter.path,
-      title: node.frontmatter.title,
-    }
-  });
+  const allDocPaths = allMarkdown.data.allMarkdownRemark.edges
+    .filter(({ node }) => {
+      return node.frontmatter.path.includes('/docs');
+    })
+    .map(({ node }) => {
+      return {
+        path: node.frontmatter.path,
+        title: node.frontmatter.title,
+      }
+    });
+
 
   allMarkdown.data.allMarkdownRemark.edges.forEach(({ node }, index) => {
     const nodePath = node.frontmatter.path;
 
-    const validPath = nodePath.includes('/docs/cli') || nodePath.includes('/themes');
+    const validPath = nodePath.includes('/docs') || nodePath.includes('/themes');
     if (validPath) {
       let template;
       let pageConfig;
 
-      if (nodePath.includes('/docs/cli/')){
-        template = docsCliTemplate;
+      if (nodePath.includes('/docs/')){
+        template = docsDetailsTemplate;
         pageConfig = {
           path: nodePath,
           component: template,
           context: {
-            cliPath: allDocsCliPaths
-          }
+            docs: allDocPaths,
+          },
         };
       } else if (nodePath.includes('/themes/')){
         template = themeDetailsTemplate;

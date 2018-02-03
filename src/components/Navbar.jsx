@@ -16,11 +16,11 @@ class Navbar extends React.Component {
       { path: '/themes',
         title: 'Themes',
       },
-      { path: '/contribute',
-        title: 'Contribute',
+      { path: '/community',
+        title: 'Community',
       },
-      { path: '/pricing',
-        title: 'Pricing',
+      { path: '/docs/quick-start/getting-started',
+        title: 'Docs',
       },
     ]
 
