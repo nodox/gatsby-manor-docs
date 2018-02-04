@@ -44,14 +44,14 @@ class DocsDetailsTemplate extends React.Component {
             })}
           </div>
           <div>
-            <h3>Contributing</h3>
-            {this.contributeDocs.map((item, idx) => {
+            <h3>Tutorials</h3>
+            {this.tutorialDocs.map((item, idx) => {
               return <Link key={idx} to={item.path}>{item.title}</Link>
             })}
           </div>
           <div>
-            <h3>Tutorials</h3>
-            {this.tutorialDocs.map((item, idx) => {
+            <h3>Contributing</h3>
+            {this.contributeDocs.map((item, idx) => {
               return <Link key={idx} to={item.path}>{item.title}</Link>
             })}
           </div>
