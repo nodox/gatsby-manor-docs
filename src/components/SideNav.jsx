@@ -43,15 +43,11 @@ class SideNav extends React.Component {
           <span className="sidenav--brand">Gatsby Manor</span>
           <ul className="sidenav--list">
             {links.map((obj, idx) => {
-              if (location.pathname === '/') {
-                return;
-              } else {
-                return (
-                  <li className="sidenav--list--item" key={idx} onClick={() => this.props.enableSideMenu(false)}>
-                    <Link className="sidenav--list--item--link" to={obj.path}>{obj.title}</Link>
-                  </li>
-                );
-              }
+              return (
+                <li className="sidenav--list--item" key={idx} onClick={() => this.props.enableSideMenu(false)}>
+                  <Link className="sidenav--list--item--link" to={obj.path}>{obj.title}</Link>
+                </li>
+              );
             })}
           </ul>
         </nav>
