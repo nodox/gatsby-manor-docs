@@ -48,3 +48,5 @@ Run `$ gatsby develop` to see the `massively` theme loaded. Yay!
 ## Other methods
 Need a different setup? Let us know! Open an [issue](https://github.com/gatsbymanor/gatsby-theme-kit/issues) on the `gatsby-theme-kit` github,
 or hunt us down on [Twitter](https://twitter.com/TheGatsbyManor) to tell us more about your project!
+
+[Edit on Github](https://github.com/gatsbymanor/gatsby-manor-content)

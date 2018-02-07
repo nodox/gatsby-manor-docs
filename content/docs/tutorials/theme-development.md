@@ -166,3 +166,5 @@ browser.
 ## Finishing up
 We now have a basic theme that is unit tested and can be modified to fit our
 needs. To contribute our theme to the Gatsby Manor gallery, read [Contribute a Theme](/docs/contribute/contribute-a-theme) in our Docs.
+
+[Edit on Github](https://github.com/gatsbymanor/gatsby-manor-content)

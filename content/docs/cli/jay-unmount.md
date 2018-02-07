@@ -21,3 +21,5 @@ None
 
 ### Examples
 To install the massively theme from Gatsby Manor we can run `jay unmount massively` from the project root.
+
+[Edit on Github](https://github.com/gatsbymanor/gatsby-manor-content)

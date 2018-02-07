@@ -23,4 +23,6 @@ We create a new git project, and push the project to the newly created
 repository. [Fork](https://github.com/gatsbymanor/gatsby-theme-kit#fork-destination-box)
 the theme kit repo. Edit the [README.md](https://github.com/gatsbymanor/gatsby-theme-kit/blob/master/README.md)
 to include the the title and link to your theme. Create a pull request with
-your changes. 
+your changes.
+
+[Edit on Github](https://github.com/gatsbymanor/gatsby-manor-content)

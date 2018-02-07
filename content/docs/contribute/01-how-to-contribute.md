@@ -20,3 +20,5 @@ contribute to Gatsby Manor.
 
 These tasks are not exhaustive. If you want to contribute in other ways reach
 out to us via Twitter [@TheGatsbyManor](https://twitter.com/TheGatsbyManor)!
+
+[Edit on Github](https://github.com/gatsbymanor/gatsby-manor-content)

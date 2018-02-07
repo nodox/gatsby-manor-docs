@@ -17,3 +17,5 @@ None
 
 ### Examples
 To install the massively theme from gatsby manor we can run `jay add massively` from the project root.
+
+[Edit on Github](https://github.com/gatsbymanor/gatsby-manor-content)

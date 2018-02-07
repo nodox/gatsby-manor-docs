@@ -14,3 +14,5 @@ commands are:
 - jay add: adds a theme to your current project
 - jay mount: sets a theme as the default theme of your project
 - jay unmount: archives a theme
+
+[Edit on Github](https://github.com/gatsbymanor/gatsby-manor-content)
