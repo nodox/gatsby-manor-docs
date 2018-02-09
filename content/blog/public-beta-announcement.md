@@ -4,10 +4,6 @@ title: "Gatsby Manor Public Beta"
 date: "2018-02-06"
 ---
 
-TL;DR: Gatsby Manor is a place to get themes for your GatsbyJS
-project. Use our [getting started](/docs/quick-start/getting-started)
-tutorial to use a Gatsby Manor theme in your GatsbyJS project today!
-
 ## Overview
 I am proud to announce Gatsby Manor, a gallery of themes for [GatsbyJS](https://www.gatsbyjs.org/).
 After 5 months of development, Gatsby Manor is now in public beta. If you are not
@@ -18,7 +14,7 @@ our [themes](/themes) to kickstart your GatsbyJS project.
 
 ## Core Concepts
 Gatsby Manor is built on top of GatsbyJS to provide a painless way of building
-a websites with reusable ReactJS components we call themes. We even have a
+websites with reusable ReactJS components we call themes. We even have a
 cleverly named npm module for theme management called [Jay](https://github.com/gatsbymanor/gatsby-jay)
 😄.
 
@@ -68,5 +64,9 @@ Gatsby Manor is in public beta until we reach v1. There are plenty of
 our tutorial on [getting started](/docs/quick-start/getting-started). Open
 an issue if you see an area of improvement. Send us positive vibes on Twitter
 using [@TheGatsbyManor](https://twitter.com/TheGatsbyManor).
+
+TL;DR: Gatsby Manor is a place to get themes for your GatsbyJS
+project. Use our [getting started](/docs/quick-start/getting-started)
+tutorial to use a Gatsby Manor theme in your GatsbyJS project today!
 
 Cheers! 🎉🎊
