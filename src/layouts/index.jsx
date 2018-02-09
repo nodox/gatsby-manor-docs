@@ -26,10 +26,12 @@ class TemplateWrapper extends React.Component {
     return (
       <div>
         <Helmet
-          title="Gatsby Default Starter"
+          title="Gatsby Manor, themes for GatsbyJS"
           meta={[
-            { name: 'description', content: 'Sample' },
-            { name: 'keywords', content: 'sample, something' },
+            { property: 'og:image', content: 'https://storage.googleapis.com/gatsby_manor_assets/gatsbymanor_og_image.jpg' },
+            { property: 'og:url', content: 'https://gatsbymanor.com' },
+            { property: 'og:title', content: 'Themes for GatsbyJS' },
+            { property: 'og:description', content: 'Browse our gallery of themes. Use the theme with GatsbyJS.' },
           ]}
         />
         <Navbar
