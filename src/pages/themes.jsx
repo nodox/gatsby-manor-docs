@@ -58,11 +58,11 @@ export default class Themes extends React.Component {
     return (
       <div>
         <Jumbotron center data={data.hero} />
-        {data.themes.map((obj, idx) => {
-          return (
-            <div className="themes-items" key={idx}>
-              <div className="themes-card">
-                <Link to={obj.path}>
+        <div className="themes">
+          {data.themes.map((obj, idx) => {
+            return (
+              <div className="themes-card" key={idx}>
+                <Link to={obj.path} className="">
                   <Img
                     title="Theme image"
                     alt="title theme"
@@ -73,9 +73,9 @@ export default class Themes extends React.Component {
                   </div>
                 </Link>
               </div>
-            </div>
-          )})
-        }
+            )})
+          }
+        </div>
       </div>
     )
 
