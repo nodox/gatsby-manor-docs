@@ -11,40 +11,9 @@ export default class Themes extends React.Component {
     super(props);
   }
 
+
   render() {
     const data = {
-      themes: [
-        {
-          title: 'Massively',
-          path: "/themes/massively",
-          image: this.props.data.massivelyImage,
-        },
-        {
-          title: 'Lens',
-          path: "/themes/lens",
-          image: this.props.data.lensImage,
-        },
-        {
-          title: 'Photon',
-          path: "/themes/photon",
-          image: this.props.data.photonImage,
-        },
-        {
-          title: 'Identity',
-          path: "/themes/identity",
-          image: this.props.data.identityImage,
-        },
-        {
-          title: 'Dimension',
-          path: "/themes/dimension",
-          image: this.props.data.dimensionImage,
-        },
-        {
-          title: 'Tessellate',
-          path: "/themes/tessellate",
-          image: this.props.data.tessellateImage,
-        },
-      ],
       hero: {
         lead: {
           title: 'Theme Gallery',
@@ -59,17 +28,17 @@ export default class Themes extends React.Component {
       <div>
         <Jumbotron center data={data.hero} />
         <div className="themes">
-          {data.themes.map((obj, idx) => {
+          {this.props.data.allMarkdownRemark.edges.map((obj, idx) => {
             return (
               <div className="themes-card" key={idx}>
-                <Link to={obj.path} className="">
+                <Link to={obj.node.frontmatter.path} className="">
                   <Img
                     title="Theme image"
                     alt="title theme"
-                    sizes={obj.image.sizes}
+                    sizes={obj.node.frontmatter.themesMasterImage.childImageSharp.sizes}
                   />
                   <div className="theme-card--name">
-                    <div className="name">{obj.title}</div>
+                    <div className="name">{obj.node.frontmatter.title}</div>
                   </div>
                 </Link>
               </div>
@@ -84,36 +53,28 @@ export default class Themes extends React.Component {
 }
 
 export const pageQuery = graphql`
-  query ThemeImagesQuery {
-    massivelyImage: imageSharp(id: { regex: "/massively/" }) {
-      sizes(maxWidth: 1670 ) {
-        ...GatsbyImageSharpSizes
+  query ThemesGalleryQuery {
+    allMarkdownRemark(filter: {
+      id: {
+        regex: "/themes/"
       }
-    },
-    identityImage: imageSharp(id: { regex: "/identity/" }) {
-      sizes(maxWidth: 1670 ) {
-        ...GatsbyImageSharpSizes
+    }) {
+      edges {
+        node {
+          id
+          frontmatter {
+            title
+            path
+            themesMasterImage {
+              childImageSharp {
+                sizes(maxWidth: 1200) {
+                  ...GatsbyImageSharpSizes
+                }
+              }
+            }
+          }
+        }
       }
-    },
-    dimensionImage: imageSharp(id: { regex: "/dimension/" }) {
-      sizes(maxWidth: 1670 ) {
-        ...GatsbyImageSharpSizes
-      }
-    },
-    photonImage: imageSharp(id: { regex: "/photon/" }) {
-      sizes(maxWidth: 1670 ) {
-        ...GatsbyImageSharpSizes
-      }
-    },
-    tessellateImage: imageSharp(id: { regex: "/tessellate/" }) {
-      sizes(maxWidth: 1670 ) {
-        ...GatsbyImageSharpSizes
-      }
-    },
-    lensImage: imageSharp(id: { regex: "/lens/" }) {
-      sizes(maxWidth: 1670 ) {
-        ...GatsbyImageSharpSizes
-      }
-    },
+    }
   }
-`
+`;

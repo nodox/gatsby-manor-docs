@@ -2,6 +2,9 @@
 path: "/themes/dimension"
 date: "2016-04-12"
 title: "Dimension"
+themesMasterImage: "./dimension.jpg"
+themesDetailImage: "./dimension.jpg"
+
 ---
 
 ### Overview

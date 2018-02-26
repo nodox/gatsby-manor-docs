@@ -2,6 +2,8 @@
 path: "/themes/tessellate"
 date: "2016-04-12"
 title: "Tessellate"
+themesMasterImage: "./tessellate.jpg"
+themesDetailImage: "./tessellate_full.jpg"
 ---
 
 ### Overview

@@ -2,6 +2,8 @@
 path: "/themes/massively"
 date: "2016-04-12"
 title: "Massively"
+themesMasterImage: "./massively.jpg"
+themesDetailImage: "./massively_full.jpg"
 ---
 
 ### Overview

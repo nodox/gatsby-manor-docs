@@ -2,6 +2,8 @@
 path: "/themes/photon"
 date: "2016-04-12"
 title: "Photon"
+themesMasterImage: "./photon.jpg"
+themesDetailImage: "./photon_full.jpg"
 ---
 
 ### Overview

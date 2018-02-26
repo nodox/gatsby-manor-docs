@@ -2,6 +2,8 @@
 path: "/themes/lens"
 date: "2016-04-12"
 title: "Lens"
+themesMasterImage: "./lens.jpg"
+themesDetailImage: "./lens.jpg"
 ---
 
 ### Overview

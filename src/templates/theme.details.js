@@ -40,32 +40,10 @@ class ThemeDetailsTemplate extends React.Component {
     var displayImageSmall = null;
     var useDarkOpenMenuClass = false;
 
-    if (location.pathname.includes('massively')) {
-      displayImage = data.massivelyFullImage.sizes;
-      displayImageSmall = data.massivelyImage.sizes;
-    } else if (location.pathname.includes('dimension')) {
-      displayImage = data.dimensionImage.sizes;
-      displayImageSmall = data.dimensionImage.sizes;
-    } else if (location.pathname.includes('lens')) {
-      displayImage = data.lensImage.sizes;
-      displayImageSmall = data.lensImage.sizes;
-      useDarkOpenMenuClass = true;
-    } else if (location.pathname.includes('photon')) {
-      displayImage = data.photonFullImage.sizes;
-      displayImageSmall = data.photonImage.sizes;
-    } else if (location.pathname.includes('identity')) {
-      displayImage = data.identityImage.sizes;
-      displayImageSmall = data.identityImage.sizes;
-    } else if (location.pathname.includes('tessellate')) {
-      displayImage = data.tessellateFullImage.sizes;
-      displayImageSmall = data.tessellateImage.sizes;
-    }
-
     let openMenuButtonClasses = classNames({
       'theme--details--main--open': true,
       '-dark': useDarkOpenMenuClass,
     });
-
 
     return (
       <div className="theme--details">
@@ -75,14 +53,14 @@ class ThemeDetailsTemplate extends React.Component {
             <Img
               title="Theme details image"
               alt="title theme"
-              sizes={displayImageSmall}
+              sizes={frontmatter.themesMasterImage.childImageSharp.sizes}
             />
           </div>
           <div className="theme--details--img--large">
             <Img
               title="Theme details image"
               alt="title theme"
-              sizes={displayImage}
+              sizes={frontmatter.themesDetailImage.childImageSharp.sizes}
             />
           </div>
         </div>
@@ -99,58 +77,27 @@ class ThemeDetailsTemplate extends React.Component {
 export default ThemeDetailsTemplate;
 
 export const pageQuery = graphql`
-  query themeDetailImagesQueryAndThemeDetailsPostByPath($path: String!) {
+  query ThemeDetailsDataQueryByPath($path: String!) {
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
       frontmatter {
         path
         title
+        themesMasterImage {
+          childImageSharp {
+            sizes(maxWidth: 1200) {
+              ...GatsbyImageSharpSizes
+            }
+          }
+        }
+        themesDetailImage {
+          childImageSharp {
+            sizes(maxWidth: 1200) {
+              ...GatsbyImageSharpSizes
+            }
+          }
+        }
       }
-    },
-    massivelyImage: imageSharp(id: { regex: "/massively/" }) {
-      sizes(maxWidth: 1670 ) {
-        ...GatsbyImageSharpSizes
-      }
-    },
-    massivelyFullImage: imageSharp(id: { regex: "/massively_full/" }) {
-      sizes(maxWidth: 1670 ) {
-        ...GatsbyImageSharpSizes
-      }
-    },
-    identityImage: imageSharp(id: { regex: "/identity/" }) {
-      sizes(maxWidth: 1670 ) {
-        ...GatsbyImageSharpSizes
-      }
-    },
-    dimensionImage: imageSharp(id: { regex: "/dimension/" }) {
-      sizes(maxWidth: 1670 ) {
-        ...GatsbyImageSharpSizes
-      }
-    },
-    photonFullImage: imageSharp(id: { regex: "/photon_full/" }) {
-      sizes(maxWidth: 1670 ) {
-        ...GatsbyImageSharpSizes
-      }
-    },
-    photonImage: imageSharp(id: { regex: "/photon/" }) {
-      sizes(maxWidth: 1670 ) {
-        ...GatsbyImageSharpSizes
-      }
-    },
-    tessellateFullImage: imageSharp(id: { regex: "/tessellate_full/" }) {
-      sizes(maxWidth: 1670 ) {
-        ...GatsbyImageSharpSizes
-      }
-    },
-    tessellateImage: imageSharp(id: { regex: "/tessellate/" }) {
-      sizes(maxWidth: 1670 ) {
-        ...GatsbyImageSharpSizes
-      }
-    },
-    lensImage: imageSharp(id: { regex: "/lens/" }) {
-      sizes(maxWidth: 1670 ) {
-        ...GatsbyImageSharpSizes
-      }
-    },
-  },
+    }
+  }
 `;

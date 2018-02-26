@@ -2,6 +2,8 @@
 path: "/themes/identity"
 date: "2016-04-12"
 title: "Identity"
+themesMasterImage: "./identity.jpg"
+themesDetailImage: "./identity.jpg"
 ---
 
 ### Overview
