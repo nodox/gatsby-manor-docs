@@ -1,0 +1,32 @@
+.subscribe {
+  text-align: center;
+
+  padding: 4rem 0;
+
+  color: black;
+  border-top: 0.1rem solid black;
+}
+
+.subscribe__button {
+  padding: 0.7rem;
+  cursor: pointer;
+  font-weight: bold;
+  margin-left: 0.7rem;
+  border-width: 1px;
+  border-style: solid;
+  border-image: initial;
+  border-radius: 2px;
+  border-color: black;
+}
+
+.subscribe__field--email {
+  border-width: 1px;
+  border-style: solid;
+  width: 250px;
+  border-radius: 2px;
+  padding: 0.7rem;
+}
+
+.subscribe--state-error {
+  color: red;
+}

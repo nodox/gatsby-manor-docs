@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import SubscribeForm from '../components/SubscribeForm'
 
 import "../styles/community.scss";
 

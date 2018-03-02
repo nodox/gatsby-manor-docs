@@ -1,5 +1,7 @@
 import React from 'react';
 import Link from 'gatsby-link';
+import SubscribeForm from '../components/SubscribeForm'
+
 
 import "../styles/docs-details.scss";
 
@@ -35,6 +37,7 @@ class DocsDetailsTemplate extends React.Component {
         <div className="docs--details--column docs--details--main">
           <h1>{frontmatter.title}</h1>
           <div className="" dangerouslySetInnerHTML={{ __html: html }} />
+          <SubscribeForm />
         </div>
         <div className="docs--details--column docs--details--sidemenu">
           <div>
