@@ -1,12 +1,12 @@
 ---
-path: "/blog/public-beta-announcement"
-title: "Gatsby Manor Public Beta"
+path: "/blog/public-alpha-announcement"
+title: "Gatsby Manor, themes for Gatsby"
 date: "2018-02-06"
 ---
 
 ## Overview
 I am proud to announce Gatsby Manor, a gallery of themes for [GatsbyJS](https://www.gatsbyjs.org/).
-After 5 months of development, Gatsby Manor is now in public beta. If you are not
+After 5 months of development, Gatsby Manor is now in public alpha. If you are not
 familiar with GatsbyJS, use their [tutorial](https://www.gatsbyjs.org/tutorial/)
 to experience the delight of working with a [ReactJS](https://reactjs.org/)
 static site generator. When you are done learning, use one of
@@ -59,7 +59,7 @@ build a theme management platform for my components. Five months later Gatsby
 Manor was born.
 
 ## Final notes
-Gatsby Manor is in public beta until we reach v1. There are plenty of
+Gatsby Manor is in public alpha stage. There are plenty of
 [Github]() contributions to go around. To get started, try out a Gatsby Manor theme using
 our tutorial on [getting started](/docs/quick-start/getting-started). Open
 an issue if you see an area of improvement. Send us positive vibes on Twitter
