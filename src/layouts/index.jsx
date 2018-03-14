@@ -11,15 +11,6 @@ import '../styles/index.scss'
 class TemplateWrapper extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      displaySideMenu: false,
-    }
-  }
-
-  setSideMenuState(menuState) {
-    this.setState({
-      displaySideMenu: menuState,
-    });
   }
 
   render() {
@@ -40,10 +31,6 @@ class TemplateWrapper extends React.Component {
         <div className="">
           {this.props.children()}
         </div>
-        <SideNav
-          location={this.props.location}
-          displayMenu={this.state.displaySideMenu}
-          enableSideMenu={(state) => this.setSideMenuState(state)} />
         <Footer path={this.props.location.pathname}/>
       </div>
     );

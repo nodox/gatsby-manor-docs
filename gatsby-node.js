@@ -5,7 +5,6 @@ exports.createPages = async ({ boundActionCreators, graphql }) => {
   const { createPage } = boundActionCreators;
 
   const docsDetailsTemplate = path.resolve(`src/templates/docs.details.js`);
-  const themeDetailsTemplate = path.resolve(`src/templates/theme.details.js`);
 
   const allMarkdown = await graphql(allMarkdownSchema);
   if (allMarkdown.errors) {
@@ -29,7 +28,8 @@ exports.createPages = async ({ boundActionCreators, graphql }) => {
   allMarkdown.data.allMarkdownRemark.edges.forEach(({ node }, index) => {
     const nodePath = node.frontmatter.path;
 
-    const validPath = nodePath.includes('/docs') || nodePath.includes('/themes');
+    const validPath = nodePath.includes('/docs');
+
     if (validPath) {
       let template;
       let pageConfig;
@@ -42,12 +42,6 @@ exports.createPages = async ({ boundActionCreators, graphql }) => {
           context: {
             docs: allDocPaths,
           },
-        };
-      } else if (nodePath.includes('/themes/')){
-        template = themeDetailsTemplate;
-        pageConfig = {
-          path: nodePath,
-          component: template,
         };
       }
 
