@@ -26,14 +26,7 @@ module.exports = {
         name: 'pages',
         path: `${__dirname}/content`,
       },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: `${__dirname}/src/images/`
-      }
-    },
+    },  
     {
       resolve: 'gatsby-transformer-remark',
       options: {

@@ -17,12 +17,8 @@
     "gatsby-plugin-sharp": "^1.6.24",
     "gatsby-source-filesystem": "^1.5.8",
     "gatsby-transformer-remark": "^1.7.21",
-    "gatsby-transformer-sharp": "^1.6.16",
     "jsonp": "^0.2.1",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "react-icons": "^2.2.7",
-    "react-test-renderer": "^16.2.0"
+    "gatsby-transformer-sharp": "^1.6.16"
   },
   "keywords": [
     "gatsby"
@@ -45,6 +41,9 @@
     "identity-obj-proxy": "^3.0.0",
     "jest": "^22.0.6",
     "prettier": "^1.8.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-test-renderer": "^16.2.0",
     "react-router-dom": "^4.2.2"
   }
 }

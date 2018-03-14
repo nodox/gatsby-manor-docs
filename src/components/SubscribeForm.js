@@ -1,6 +1,6 @@
-import React from "react"
-import jsonp from "jsonp"
-import { validate } from "email-validator"
+import React from 'react'
+import jsonp from 'jsonp'
+import { validate } from 'email-validator'
 
 import styles from '../styles/_subscribe_form.module.css'
 
@@ -34,14 +34,14 @@ class SubscribeForm extends React.Component {
           msg: err,
         })
 
-      // Mailchimp errors & failures
+        // Mailchimp errors & failures
       } else if (data.result !== `success`) {
         this.setState({
           status: `error`,
           msg: data.msg,
         })
 
-      // Posted email successfully to Mailchimp
+        // Posted email successfully to Mailchimp
       } else {
         this.setState({
           status: `success`,
@@ -104,7 +104,8 @@ class SubscribeForm extends React.Component {
                 <button
                   type="submit"
                   className={styles['subscribe__button']}
-                  onClick={this._handleFormSubmit}>
+                  onClick={this._handleFormSubmit}
+                >
                   Subscribe
                 </button>
                 {this.state.status === `error` && (
