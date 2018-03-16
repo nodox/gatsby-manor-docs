@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Docs /> should render correctly 1`] = `
+<div>
+  <div
+    className="docs--banner"
+  >
+    <h1
+      className="docs--banner--title"
+    >
+      Docs
+    </h1>
+  </div>
+  <div
+    className="container mr-auto docs--section"
+  >
+    <div>
+      <h1
+        className=""
+      >
+        Quick Start
+      </h1>
+    </div>
+    <div>
+      <h2
+        className=""
+      >
+        Github
+      </h2>
+      <p>
+        Any questions about the Jay, Themes, or Gatsby Manor can be directed to 
+        <a
+          href="https://github.com/gatsbymanor"
+        >
+          Github
+        </a>
+        . Find the repo you are interested in and create an issue detailing your problem. A core member will join the conversation when they are free. PR's are welcome for easy fixes or brand new features!
+      </p>
+    </div>
+  </div>
+</div>
+`;

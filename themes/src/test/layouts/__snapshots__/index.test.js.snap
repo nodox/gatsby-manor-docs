@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TemplateWrapper /> should render correctly 1`] = `
+<div>
+  <HelmetWrapper
+    defer={true}
+    encodeSpecialCharacters={true}
+    meta={
+      Array [
+        Object {
+          "content": "https://storage.googleapis.com/gatsby_manor_assets/gatsbymanor_og_image.jpg",
+          "property": "og:image",
+        },
+        Object {
+          "content": "https://gatsbymanor.com",
+          "property": "og:url",
+        },
+        Object {
+          "content": "Themes for GatsbyJS",
+          "property": "og:title",
+        },
+        Object {
+          "content": "Browse our gallery of themes. Use the theme with GatsbyJS.",
+          "property": "og:description",
+        },
+      ]
+    }
+    title="Gatsby Manor, themes for GatsbyJS"
+  />
+  <Navbar
+    enableSideMenu={[Function]}
+    location={
+      Object {
+        "pathname": "/home",
+      }
+    }
+  />
+  <div
+    className=""
+  />
+  <Footer
+    path="/home"
+  />
+</div>
+`;

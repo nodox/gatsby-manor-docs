@@ -10,7 +10,7 @@ class IndexPage extends React.Component {
 
   render() {
     return (
-      <div> Hello World! Welcome to Docs!</div>
+      <div> Hello World! Welcome to Index of Docs!</div>
     );
   }
 

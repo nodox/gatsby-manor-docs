@@ -1,0 +1,5 @@
+{
+  "gatsby-config": "./themes/src/gatsby-config.js",
+  "gatsby-node": "./themes/src/gatsby-node.js"
+
+}

@@ -8,12 +8,15 @@ import Footer from '../components/Footer';
 
 import '../styles/index.scss'
 
-class TemplateWrapper extends React.Component {
+class Layout extends React.Component {
   constructor(props) {
     super(props);
   }
 
   render() {
+
+    var location = this.props.layoutLocation;
+
     return (
       <div>
         <Helmet
@@ -26,19 +29,15 @@ class TemplateWrapper extends React.Component {
           ]}
         />
         <Navbar
-          location={this.props.location}
+          location={location}
           enableSideMenu={(state) => this.setSideMenuState(state)} />
         <div className="">
-          {this.props.children()}
+          {this.props.children}
         </div>
-        <Footer path={this.props.location.pathname}/>
+        <Footer path={location.pathname}/>
       </div>
     );
   }
 }
 
-TemplateWrapper.propTypes = {
-  children: PropTypes.func,
-}
-
-export default TemplateWrapper
+export default Layout

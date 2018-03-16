@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Navbar /> should render 1`] = `
+<nav
+  className="navbar navbar-dark"
+>
+  <a
+    className="navbar-brand"
+    href="/"
+  >
+    Gatsby Manor
+  </a>
+  <ul
+    className="navbar-nav"
+  >
+    <li
+      className="nav-item"
+      key="0"
+    >
+      <GatsbyLink
+        className="nav-link"
+        to="/themes"
+      >
+        Themes
+      </GatsbyLink>
+    </li>
+    <li
+      className="nav-item"
+      key="1"
+    >
+      <GatsbyLink
+        className="nav-link"
+        to="/community"
+      >
+        Community
+      </GatsbyLink>
+    </li>
+    <li
+      className="nav-item"
+      key="2"
+    >
+      <GatsbyLink
+        className="nav-link"
+        to="/docs/quick-start/getting-started"
+      >
+        Docs
+      </GatsbyLink>
+    </li>
+  </ul>
+  <div
+    className="navbar--sidemenu--button"
+    onClick={[Function]}
+  >
+    ☰
+  </div>
+</nav>
+`;
