@@ -1,0 +1,181 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Themes /> should render correctly 1`] = `
+<div>
+  <Jumbotron
+    center={true}
+    data={
+      Object {
+        "lead": Object {
+          "callToAction": "",
+          "partOne": "Developers deserve beautiful designs.",
+          "partTwo": "Find a theme. Let Jay do the rest.",
+          "title": "Theme Gallery",
+        },
+      }
+    }
+  />
+  <div
+    className="themes-items"
+    key="0"
+  >
+    <div
+      className="themes-card"
+    >
+      <GatsbyLink
+        to="/themes/massively"
+      >
+        <Image
+          alt="title theme"
+          fadeIn={true}
+          title="Theme image"
+        />
+        <div
+          className="theme-card--name"
+        >
+          <div
+            className="name"
+          >
+            Massively
+          </div>
+        </div>
+      </GatsbyLink>
+    </div>
+  </div>
+  <div
+    className="themes-items"
+    key="1"
+  >
+    <div
+      className="themes-card"
+    >
+      <GatsbyLink
+        to="/themes/lens"
+      >
+        <Image
+          alt="title theme"
+          fadeIn={true}
+          title="Theme image"
+        />
+        <div
+          className="theme-card--name"
+        >
+          <div
+            className="name"
+          >
+            Lens
+          </div>
+        </div>
+      </GatsbyLink>
+    </div>
+  </div>
+  <div
+    className="themes-items"
+    key="2"
+  >
+    <div
+      className="themes-card"
+    >
+      <GatsbyLink
+        to="/themes/photon"
+      >
+        <Image
+          alt="title theme"
+          fadeIn={true}
+          title="Theme image"
+        />
+        <div
+          className="theme-card--name"
+        >
+          <div
+            className="name"
+          >
+            Photon
+          </div>
+        </div>
+      </GatsbyLink>
+    </div>
+  </div>
+  <div
+    className="themes-items"
+    key="3"
+  >
+    <div
+      className="themes-card"
+    >
+      <GatsbyLink
+        to="/themes/identity"
+      >
+        <Image
+          alt="title theme"
+          fadeIn={true}
+          title="Theme image"
+        />
+        <div
+          className="theme-card--name"
+        >
+          <div
+            className="name"
+          >
+            Identity
+          </div>
+        </div>
+      </GatsbyLink>
+    </div>
+  </div>
+  <div
+    className="themes-items"
+    key="4"
+  >
+    <div
+      className="themes-card"
+    >
+      <GatsbyLink
+        to="/themes/dimension"
+      >
+        <Image
+          alt="title theme"
+          fadeIn={true}
+          title="Theme image"
+        />
+        <div
+          className="theme-card--name"
+        >
+          <div
+            className="name"
+          >
+            Dimension
+          </div>
+        </div>
+      </GatsbyLink>
+    </div>
+  </div>
+  <div
+    className="themes-items"
+    key="5"
+  >
+    <div
+      className="themes-card"
+    >
+      <GatsbyLink
+        to="/themes/tessellate"
+      >
+        <Image
+          alt="title theme"
+          fadeIn={true}
+          title="Theme image"
+        />
+        <div
+          className="theme-card--name"
+        >
+          <div
+            className="name"
+          >
+            Tessellate
+          </div>
+        </div>
+      </GatsbyLink>
+    </div>
+  </div>
+</div>
+`;
