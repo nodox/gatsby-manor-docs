@@ -1,4 +1,5 @@
 ---
+section: "CLI commands"
 path: "/docs/cli/unmount"
 date: "2016-04-12"
 title: "Jay unmount"

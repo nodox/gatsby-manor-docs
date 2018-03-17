@@ -5,6 +5,7 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-catch-links',
+    'gatsby-plugin-netlify',
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
@@ -26,7 +27,7 @@ module.exports = {
         name: 'pages',
         path: `${__dirname}/content`,
       },
-    },  
+    },
     {
       resolve: 'gatsby-transformer-remark',
       options: {

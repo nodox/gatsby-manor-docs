@@ -1,4 +1,5 @@
 ---
+section: "CLI commands"
 path: "/docs/cli/list"
 date: "2016-04-12"
 title: "Jay list"

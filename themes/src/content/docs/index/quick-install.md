@@ -1,4 +1,5 @@
 ---
+section: "Getting Started"
 path: "/docs/quick-start/getting-started"
 title: "Getting Started"
 ---

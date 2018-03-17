@@ -3,10 +3,11 @@ import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
 import Navbar from '../components/Navbar'
-import SideNav from '../components/SideNav'
 import Footer from '../components/Footer';
 
-import '../styles/index.scss'
+import '../styles/_reboot.scss'
+import '../styles/_reset.scss'
+import styles from '../styles/layout.module.scss'
 
 class Layout extends React.Component {
   constructor(props) {
@@ -18,7 +19,7 @@ class Layout extends React.Component {
     var location = this.props.layoutLocation;
 
     return (
-      <div>
+      <div className={styles['site']}>
         <Helmet
           title="Gatsby Manor, themes for GatsbyJS"
           meta={[
@@ -28,10 +29,8 @@ class Layout extends React.Component {
             { property: 'og:description', content: 'Browse our gallery of themes. Use the theme with GatsbyJS.' },
           ]}
         />
-        <Navbar
-          location={location}
-          enableSideMenu={(state) => this.setSideMenuState(state)} />
-        <div className="">
+        <Navbar location={location} />
+        <div className={styles['main']}>
           {this.props.children}
         </div>
         <Footer path={location.pathname}/>

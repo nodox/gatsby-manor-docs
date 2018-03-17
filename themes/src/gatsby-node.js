@@ -2,7 +2,7 @@ const path = require('path');
 const allMarkdownSchema = require('./graphql/markdown.schema').allMarkdownSchema;
 
 exports.createPages = async ({ boundActionCreators, graphql }) => {
-  const { createPage } = boundActionCreators;
+  const { createPage, createRedirect } = boundActionCreators;
 
   const docsDetailsTemplate = path.resolve(__dirname, `templates`, `docs.details.js`);
   const allMarkdown = await graphql(allMarkdownSchema);
@@ -49,9 +49,19 @@ exports.createPages = async ({ boundActionCreators, graphql }) => {
   });
 
   const indexTemplate = path.resolve(__dirname, `templates`, `index.js`);
-  indexConfig = {
+  let indexConfig = {
     path: '/',
     component: indexTemplate,
   };
   createPage(indexConfig);
+
+  const errorTemplate = path.resolve(__dirname, `templates`, `404.js`);
+  let errorConfig = {
+    path: '/404',
+    component: errorTemplate,
+  };
+  createPage(errorConfig);
+
+  // Netlify _redirects file rules
+  createRedirect({ fromPath: "/themes/*", toPath: "https://gatsbymanor.com/themes/:splat" });
 };
