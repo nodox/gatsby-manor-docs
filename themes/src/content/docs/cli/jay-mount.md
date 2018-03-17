@@ -1,4 +1,5 @@
 ---
+section: "CLI commands"
 path: "/docs/cli/mount"
 date: "2016-04-12"
 title: "Jay mount"

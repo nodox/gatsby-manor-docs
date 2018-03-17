@@ -1,4 +1,5 @@
 ---
+section: "Contributing"
 path: "/docs/contribute/contribute-a-theme"
 title: "Contribute a Theme"
 ---

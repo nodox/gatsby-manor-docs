@@ -1,4 +1,5 @@
 ---
+section: "Contributing"
 path: "/docs/contribute/how-to-contribute"
 title: "How to Contribute"
 ---

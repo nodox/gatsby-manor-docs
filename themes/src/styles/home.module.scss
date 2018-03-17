@@ -1,0 +1,33 @@
+.banner {
+  padding: 4rem;
+  text-align: center;
+
+  .title {
+    font-size: 3.5rem;
+  }
+
+  .description {
+    font-size: 1.2rem;
+  }
+
+}
+
+.grid {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+
+.card {
+  display: block;
+  width: 300px;
+  border: 1px solid gray;
+  text-decoration: none;
+  color: black;
+
+  margin: 0 auto 0 auto;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+
+}

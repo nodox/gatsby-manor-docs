@@ -13,20 +13,11 @@ class Navbar extends React.Component {
 
     const { data, location } = this.props;
     const links = [
-      { path: '/themes',
+      {
+        path: '/themes',
         title: 'Themes',
       },
-      { path: '/community',
-        title: 'Community',
-      },
-      { path: '/docs/quick-start/getting-started',
-        title: 'Docs',
-      },
     ]
-
-    let navBarSideMenuButtonClasses = classNames({
-      'navbar--sidemenu--button': true,
-    });
 
     return (
       <nav className="navbar navbar-dark">
@@ -40,7 +31,6 @@ class Navbar extends React.Component {
             );
           })}
         </ul>
-        <div className={navBarSideMenuButtonClasses} onClick={() => this.props.enableSideMenu(true)}>&#9776;</div>
       </nav>
     );
   }

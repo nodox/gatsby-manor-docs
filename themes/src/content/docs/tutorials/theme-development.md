@@ -1,4 +1,5 @@
 ---
+section: "Tutorials"
 path: "/docs/tutorials/theme-development"
 title: "Theme Development"
 ---
