@@ -63,5 +63,8 @@ exports.createPages = async ({ boundActionCreators, graphql }) => {
   createPage(errorConfig);
 
   // Netlify _redirects file rules
+  createRedirect({ fromPath: "/home", toPath: "https://gatsbymanor.com" });
+
+  createRedirect({ fromPath: "/themes", toPath: "https://gatsbymanor.com/themes" });
   createRedirect({ fromPath: "/themes/*", toPath: "https://gatsbymanor.com/themes/:splat" });
 };
