@@ -14,19 +14,19 @@ class Navbar extends React.Component {
     const { data, location } = this.props;
     const links = [
       {
-        path: '/themes',
+        path: 'https://gatsbymanor.com/themes',
         title: 'Themes',
       },
     ]
 
     return (
       <nav className="navbar navbar-dark">
-        <a href="/" className="navbar-brand">Gatsby Manor</a>
+        <a href="https://gatsbymanor.com" className="navbar-brand">Gatsby Manor</a>
         <ul className="navbar-nav">
           {links.map((obj, idx) => {
             return (
               <li className="nav-item" key={idx}>
-                <Link className="nav-link" to={obj.path}>{obj.title}</Link>
+                <a className="nav-link" href={obj.path}>{obj.title}</a>
               </li>
             );
           })}
