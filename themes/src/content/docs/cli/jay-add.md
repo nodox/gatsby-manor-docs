@@ -8,7 +8,10 @@ title: "Jay add"
 ### `jay add <name>`
 Adds a theme.
 
-The `add` command retrieves the theme given in the `name` parameter from Gatsby Manor. Under the hood Jay uses git to clone themes unto your project. Therefore you must ensure to have `git` installed on your system in order to run this command error free.
+The `add` command retrieves the theme given in the `name` parameter from Gatsby Manor.
+Under the hood Jay uses git to clone themes unto your project. Therefore you must
+ensure to have `git` installed on your system in order to run this command error free.
+Themes will be stored in the `themes` directory of your project.
 
 ### Options
 None
@@ -17,6 +20,6 @@ None
 None
 
 ### Examples
-To install the massively theme from gatsby manor we can run `jay add massively` from the project root.
+To install the massively theme from gatsby manor we can run `$ jay add massively` from the project root.
 
-[Edit on Github](https://github.com/gatsbymanor/gatsby-manor-content)
+[Edit on Github](https://github.com/gatsbymanor/gatsby-manor-docs)

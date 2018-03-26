@@ -4,50 +4,42 @@ path: "/docs/quick-start/getting-started"
 title: "Getting Started"
 ---
 
-There are a number of ways to use Gatsby Manor [themes](https://gatsbymanor.com/themes).
-You can either start with a brand new project or include a theme into an existing [GatsbyJS](https://www.gatsbyjs.org/) project.
+Jay bootstraps gatsby projects to work with the [themes](https://gatsbymanor.com/themes)
+in found in the Gatsby Manor gallery. If you want more themes, hunt us down on
+[Twitter](https://twitter.com/TheGatsbyManor) or [Github](https://github.com/gatsbymanor) for theme requests.
+Theme contributions and PRs are welcome!
 
-## Starting from Scratch
-First we need to clone [gatsby-theme-kit](https://github.com/gatsbymanor/gatsby-theme-kit)
-from Github and install all required dependencies.
-
-```
-$ git clone https://github.com/gatsbymanor/gatsby-theme-kit.git
-$ cd gatsby-theme-kit
-$ yarn
-```
-
-If you run `$ gatsby develop` we will see the default `Starter` theme. The page should
-say `Hello World`. Now that we are all setup we can add our first theme. First we
-need to unmount the active theme. Then, we can add a
-new theme and set it to be the active theme. All of this is done with the [gatsby-jay](https://github.com/gatsbymanor/gatsby-jay) cli,
-a theme management tool. We'll run the `jay` commands via yarn scripts to avoid
-adding global dependency to your global npm modules. Now, let's try to use the [identity](https://gatsbymanor.com/themes/identity) theme.
+## Starting a new project
+Starting from scratch is the easiest and fastest way to get started with `jay`.
 
 ```
-$ yarn run jay unmount starter
-$ yarn run jay add identity
-$ yarn run jay mount identity
+$ yarn global add gatsby-cli gatsby-jay
+$ jay init PROJECT_NAME
+$ cd PROJECT_NAME
+$ gatsby develop
 ```
-
-Now when you run `$ gatsby develop` the `identity` theme is present. Yay!
+Four steps and you are done! In these steps we install our gatsby and jay
+dependencies, create a new gatsby project with `jay`, and run our starter project.
 
 ## Existing Gatsby projects
-Gatsby Manor is built on the top of the [GatsbyJS](https://www.gatsbyjs.org/) ecosystem therefore these themes are compatible with an existing `gatsby` project but they might require a bit of tweaking. First we need to add the `jay` cli tool and unmount your current `/src` folder into its own local theme. Then,
-download the target theme, for this tutorial let's use the [massively](https://gatsbymanor.com/themes/massively) theme.
+As of writing we do not recommend using jay with an existing gatsby. But you can
+manually bootstrap your project so that it can work with jay. The best way to do
+this would be to start a new separate project compare the theme structure to your
+current structure. Here are the most helpful files to look at.
 
 ```
-$ yarn global add gatsby-jay
-$ cd DIRECTOY_NAME
-$ jay unmount my-old-theme
-$ jay add massively
-$ jay mount massively
+jay.json
+jay-config.js
+gatsby-config.js
+gatsby-node.js
+gatsby-ssr.js
+gatsby-browser.js
+themes/starter/jay-node.js
+themes/starter/jay-config.js
+themes/starter/jay-ssr.js
+themes/starter/jay-browser.js
 ```
 
-Run `$ gatsby develop` to see the `massively` theme loaded. Yay!
+These will be the most useful files when bootstrapping your existing project.
 
-## Other methods
-Need a different setup? Let us know! Open an [issue](https://github.com/gatsbymanor/gatsby-theme-kit/issues) on the `gatsby-theme-kit` github,
-or hunt us down on [Twitter](https://twitter.com/TheGatsbyManor) to tell us more about your project!
-
-[Edit on Github](https://github.com/gatsbymanor/gatsby-manor-content)
+[Edit on Github](https://github.com/gatsbymanor/gatsby-manor-docs)
