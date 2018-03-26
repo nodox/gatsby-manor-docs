@@ -17,6 +17,6 @@ None
 None
 
 ### Examples
-To view all available themes use `jay list` from the project root.
+To view all available themes use `$ jay list` from the project root.
 
-[Edit on Github](https://github.com/gatsbymanor/gatsby-manor-content)
+[Edit on Github](https://github.com/gatsbymanor/gatsby-manor-docs)

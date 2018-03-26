@@ -4,7 +4,6 @@ path: "/docs/contribute/how-to-contribute"
 title: "How to Contribute"
 ---
 
-## Contributing
 Contributing to Gatsby Manor is fun, and open to everyone! There are many ways to contribute
 beyond the traditional pull request. Below are a few of the many ways you can
 contribute to Gatsby Manor.
@@ -22,4 +21,4 @@ contribute to Gatsby Manor.
 These tasks are not exhaustive. If you want to contribute in other ways reach
 out to us via Twitter [@TheGatsbyManor](https://twitter.com/TheGatsbyManor)!
 
-[Edit on Github](https://github.com/gatsbymanor/gatsby-manor-content)
+[Edit on Github](https://github.com/gatsbymanor/gatsby-manor-docs)

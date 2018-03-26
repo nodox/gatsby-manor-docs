@@ -4,6 +4,7 @@ import Layout from '../layouts/layout'
 import SubscribeForm from '../components/SubscribeForm'
 
 import '../styles/docs-details.scss'
+import "../styles/_snippets.scss";
 
 class DocsDetailsTemplate extends React.Component {
   constructor(props) {
